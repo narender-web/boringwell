@@ -1,11 +1,26 @@
 <?php
 // Shared configuration
-define('SITE_NAME',    'Shankar Borewell');
+define('SITE_NAME',    'Jitu Borwell');
 define('SITE_PHONE',   '+91 98765 43210');
 define('SITE_PHONE2',  '+91 98765 43211');
-define('SITE_EMAIL',   'info@shankarborewell.com');
+define('SITE_EMAIL',   'online.narender@gmail.com');
 define('SITE_ADDRESS', 'No. 12, Main Road, Bangalore - 560001, Karnataka, India');
 define('SITE_HOURS',   'Mon – Sat: 8:00 AM – 7:00 PM');
+
+// Session + CSRF management (shared across all pages)
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+// Capture and clear global form-status flash (set by process-contact.php)
+$_GLOBAL_FORM_STATUS  = $_SESSION['form_status']  ?? null;
+$_GLOBAL_FORM_MESSAGE = $_SESSION['form_message'] ?? null;
+if ($_GLOBAL_FORM_STATUS !== null) {
+    unset($_SESSION['form_status'], $_SESSION['form_message'], $_SESSION['form_data']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +28,7 @@ define('SITE_HOURS',   'Mon – Sat: 8:00 AM – 7:00 PM');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo isset($page_title) ? htmlspecialchars($page_title) . ' | ' . SITE_NAME : SITE_NAME . ' – Professional Borewell Services'; ?></title>
-    <meta name="description" content="<?php echo isset($page_desc) ? htmlspecialchars($page_desc) : 'Shankar Borewell offers professional borewell drilling, repair, and pump installation services across Bangalore and Karnataka. 24/7 service, 20+ years experience.'; ?>">
+    <meta name="description" content="<?php echo isset($page_desc) ? htmlspecialchars($page_desc) : 'Jitu Borwell offers professional borewell drilling, repair, and pump installation services across Bangalore and Karnataka. 24/7 service, 20+ years experience.'; ?>">
     <meta name="keywords" content="borewell drilling, borewell repair, water borewell, pump installation, Bangalore borewell, Karnataka borewell">
 
     <!-- Open Graph -->
@@ -29,6 +44,15 @@ define('SITE_HOURS',   'Mon – Sat: 8:00 AM – 7:00 PM');
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- ===== Global Form Flash Notification ===== -->
+<?php if ($_GLOBAL_FORM_STATUS !== null): ?>
+<div id="flash-notification" class="flash-notification flash-<?php echo htmlspecialchars($_GLOBAL_FORM_STATUS); ?>">
+    <i class="fas fa-<?php echo $_GLOBAL_FORM_STATUS === 'success' ? 'check-circle' : 'exclamation-circle'; ?>"></i>
+    <?php echo htmlspecialchars($_GLOBAL_FORM_MESSAGE); ?>
+    <button class="flash-close" onclick="this.parentElement.remove()" aria-label="Close">&times;</button>
+</div>
+<?php endif; ?>
 
 <!-- ===== Top Bar ===== -->
 <div class="top-bar">
@@ -71,7 +95,7 @@ define('SITE_HOURS',   'Mon – Sat: 8:00 AM – 7:00 PM');
                 <li><a href="services.php">Services</a></li>
                 <li><a href="gallery.php">Gallery</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li class="nav-cta"><a href="contact.php" class="btn btn-primary">Get Free Quote</a></li>
+                <li class="nav-cta"><a href="contact.php" class="btn btn-primary" data-modal="quote">Get Free Quote</a></li>
             </ul>
         </nav>
     </div>

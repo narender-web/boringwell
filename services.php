@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Our Services';
-$page_desc  = 'Explore Shankar Borewell\'s full range of services: drilling, repair, cleaning, pump installation, casing, and water testing in Bangalore and Karnataka.';
+$page_desc  = 'Explore Jitu Borwell\'s full range of services: drilling, repair, cleaning, pump installation, casing, and water testing in Bangalore and Karnataka.';
 include 'includes/header.php';
 ?>
 
@@ -105,7 +105,7 @@ foreach ($services as $idx => $svc):
                     <?php endforeach; ?>
                 </ul>
 
-                <a href="contact.php" class="btn btn-primary">Get a Quote <i class="fas fa-arrow-right"></i></a>
+                <a href="contact.php" class="btn btn-primary" data-modal="quote">Get a Quote <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </div>

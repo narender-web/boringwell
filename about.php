@@ -1,6 +1,6 @@
 <?php
 $page_title = 'About Us';
-$page_desc  = 'Learn about Shankar Borewell – 20+ years of professional borewell drilling and water solutions in Bangalore and Karnataka.';
+$page_desc  = 'Learn about Jitu Borwell – 20+ years of professional borewell drilling and water solutions in Bangalore and Karnataka.';
 include 'includes/header.php';
 ?>
 
@@ -31,7 +31,7 @@ include 'includes/header.php';
                     <span class="underline" style="margin:.75rem 0 0;"></span>
                 </div>
 
-                <p>Founded in 2004 by <strong>Mr. Shankar Rao</strong>, Shankar Borewell began as a small one-rig operation in Bangalore and has grown into one of Karnataka's most trusted borewell service providers.</p>
+                <p>Founded in 2004 by <strong>Mr. Jitu</strong>, Jitu Borwell began as a small one-rig operation in Bangalore and has grown into one of Karnataka's most trusted borewell service providers.</p>
 
                 <p>We specialize in new borewell drilling, borewell repair, borewell cleaning, submersible pump installation, PVC casing, and water quality testing. Our licensed team of hydrogeologists and experienced drill operators serves residential, commercial, industrial, and agricultural clients.</p>
 
@@ -98,7 +98,7 @@ include 'includes/header.php';
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.75rem;">
             <?php
             $team = [
-                ['name'=>'Shankar Rao',    'role'=>'Founder & CEO',            'icon'=>'👨‍💼'],
+                ['name'=>'Jitu',           'role'=>'Founder & CEO',            'icon'=>'👨‍💼'],
                 ['name'=>'Vijay Kumar',    'role'=>'Lead Hydrogeologist',       'icon'=>'🔬'],
                 ['name'=>'Raju Naik',      'role'=>'Senior Drill Operator',     'icon'=>'⚙️'],
                 ['name'=>'Priya Sharma',   'role'=>'Customer Relations Manager','icon'=>'👩‍💼'],

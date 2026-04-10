@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Home';
-$page_desc  = 'Shankar Borewell – Professional borewell drilling, repair and pump installation in Bangalore. 20+ years experience. Call now for a free quote.';
+$page_desc  = 'Jitu Borwell – Professional borewell drilling, repair and pump installation in Bangalore. 20+ years experience. Call now for a free quote.';
 include 'includes/header.php';
 ?>
 
@@ -12,7 +12,7 @@ include 'includes/header.php';
             <h1>Expert <span>Borewell</span><br>Services You Can Trust</h1>
             <p>Professional borewell drilling, repair, and pump installation services across Bangalore and Karnataka. Licensed engineers, modern equipment, and guaranteed results.</p>
             <div class="hero-actions">
-                <a href="contact.php" class="btn btn-primary"><i class="fas fa-phone-alt"></i>&nbsp; Get Free Quote</a>
+                <a href="contact.php" class="btn btn-primary" data-modal="quote"><i class="fas fa-phone-alt"></i>&nbsp; Get Free Quote</a>
                 <a href="services.php" class="btn btn-outline"><i class="fas fa-list"></i>&nbsp; Our Services</a>
             </div>
             <div class="hero-stats">
@@ -128,10 +128,10 @@ include 'includes/header.php';
 
             <div class="about-content">
                 <div class="section-title" style="text-align:left;margin-bottom:1.5rem;">
-                    <h2>About Shankar Borewell</h2>
+                    <h2>About Jitu Borwell</h2>
                     <span class="underline" style="margin:0.75rem 0 0;"></span>
                 </div>
-                <p>Since 2004, <strong>Shankar Borewell</strong> has been providing reliable, efficient, and affordable borewell solutions to thousands of satisfied customers across Bangalore and Karnataka.</p>
+                <p>Since 2004, <strong>Jitu Borwell</strong> has been providing reliable, efficient, and affordable borewell solutions to thousands of satisfied customers across Bangalore and Karnataka.</p>
                 <p>Our team of licensed hydrogeologists and experienced drilling crews use modern equipment to ensure maximum success rates and water yield for every project.</p>
 
                 <div class="about-features">
@@ -200,8 +200,8 @@ include 'includes/header.php';
         <div class="testimonials-grid">
             <?php
             $testimonials = [
-                ['text'=>'Shankar Borewell drilled our borewell in just 2 days and we got excellent water yield. Their team was professional and clean. Highly recommended!', 'name'=>'Ramesh Kumar', 'loc'=>'Whitefield, Bangalore', 'init'=>'RK', 'cls'=>''],
-                ['text'=>'Our old borewell had gone dry. Shankar Borewell cleaned and restored it at a fraction of re-drilling cost. Excellent service and fair pricing.', 'name'=>'Sunita Patel',  'loc'=>'Mysuru, Karnataka',    'init'=>'SP', 'cls'=>'bg-accent'],
+                ['text'=>'Jitu Borwell drilled our borewell in just 2 days and we got excellent water yield. Their team was professional and clean. Highly recommended!', 'name'=>'Ramesh Kumar', 'loc'=>'Whitefield, Bangalore', 'init'=>'RK', 'cls'=>''],
+                ['text'=>'Our old borewell had gone dry. Jitu Borwell cleaned and restored it at a fraction of re-drilling cost. Excellent service and fair pricing.', 'name'=>'Sunita Patel',  'loc'=>'Mysuru, Karnataka',    'init'=>'SP', 'cls'=>'bg-accent'],
                 ['text'=>'Used their pump installation service. The team arrived on time, work was done neatly, and they explained everything clearly. Great experience!', 'name'=>'Gopal Reddy',  'loc'=>'Tumkur, Karnataka',    'init'=>'GR', 'cls'=>'bg-green'],
             ];
             foreach ($testimonials as $t): ?>
@@ -246,7 +246,7 @@ include 'includes/header.php';
         <h2 style="color:#fff;margin-bottom:.75rem;">Need a Borewell? Let's Talk!</h2>
         <p style="color:rgba(255,255,255,.9);margin-bottom:1.75rem;max-width:550px;margin-left:auto;margin-right:auto;">Our team is ready to help. Contact us today for a free site survey and competitive quote.</p>
         <a href="tel:<?php echo SITE_PHONE; ?>" class="btn btn-outline" style="margin-right:1rem;"><i class="fas fa-phone-alt"></i>&nbsp; Call Now</a>
-        <a href="contact.php" class="btn" style="background:#fff;color:var(--accent);font-weight:700;"><i class="fas fa-envelope"></i>&nbsp; Send Enquiry</a>
+        <a href="contact.php" class="btn" style="background:#fff;color:var(--accent);font-weight:700;" data-modal="quote"><i class="fas fa-envelope"></i>&nbsp; Send Enquiry</a>
     </div>
 </section>
 

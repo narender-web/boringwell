@@ -140,3 +140,101 @@ if (contactForm) {
         }
     });
 }
+
+// ===========================
+// Get Quote Modal
+// ===========================
+(function () {
+    const modal      = document.getElementById('quote-modal');
+    const closeBtn   = document.getElementById('modal-close-btn');
+    const modalForm  = document.getElementById('quote-modal-form');
+    const redirectTo = document.getElementById('modal-redirect-to');
+    const modalAlert = document.getElementById('modal-alert');
+
+    if (!modal) return;
+
+    // Set redirect_to to current page so flash notification appears here after submit
+    if (redirectTo) {
+        const page = window.location.pathname.split('/').pop() || 'index.php';
+        redirectTo.value = page || 'index.php';
+    }
+
+    function openModal() {
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        modal.querySelector('input[name="name"]').focus();
+    }
+
+    function closeModal() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+        if (modalAlert) {
+            modalAlert.hidden = true;
+            modalAlert.className = 'modal-alert';
+            modalAlert.textContent = '';
+        }
+    }
+
+    // Open modal on any element with data-modal="quote"
+    document.querySelectorAll('[data-modal="quote"]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+            e.preventDefault();
+            openModal();
+        });
+    });
+
+    // Close button
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    // Click outside modal container to close
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal();
+    });
+
+    // Escape key to close
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+
+    // Client-side validation for modal form
+    if (modalForm) {
+        modalForm.addEventListener('submit', function (e) {
+            let valid = true;
+            modalForm.querySelectorAll('[required]').forEach(function (field) {
+                field.style.borderColor = '';
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#C62828';
+                    valid = false;
+                }
+            });
+
+            const emailField = modalForm.querySelector('input[type="email"]');
+            if (emailField && emailField.value.trim()) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailField.value.trim())) {
+                    emailField.style.borderColor = '#C62828';
+                    valid = false;
+                }
+            }
+
+            if (!valid) {
+                e.preventDefault();
+                if (modalAlert) {
+                    modalAlert.className = 'modal-alert alert-error';
+                    modalAlert.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please fill in all required fields correctly.';
+                    modalAlert.hidden = false;
+                }
+            }
+        });
+    }
+
+    // Auto-dismiss flash notification after 7 seconds
+    const flash = document.getElementById('flash-notification');
+    if (flash) {
+        setTimeout(function () {
+            flash.style.transition = 'opacity .5s ease';
+            flash.style.opacity = '0';
+            setTimeout(function () { flash.remove(); }, 500);
+        }, 7000);
+    }
+})();
