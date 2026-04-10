@@ -22,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $redirect_to = 'contact.php';
 if (!empty($_POST['redirect_to'])) {
     $candidate = trim($_POST['redirect_to']);
-    // Only allow relative paths to pages in this site (no protocol or host)
-    if (preg_match('/^[a-zA-Z0-9_\-\.\/]+\.php$/', $candidate) && strpos($candidate, '..') === false) {
+    // Only allow relative filenames in this directory (no slashes, no traversal)
+    if (preg_match('/^[a-zA-Z0-9_\-\.]+\.php$/', $candidate) && strpos($candidate, '..') === false) {
         $redirect_to = $candidate;
     }
 }

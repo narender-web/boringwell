@@ -19,7 +19,8 @@ if (empty($_SESSION['csrf_token'])) {
 $_GLOBAL_FORM_STATUS  = $_SESSION['form_status']  ?? null;
 $_GLOBAL_FORM_MESSAGE = $_SESSION['form_message'] ?? null;
 if ($_GLOBAL_FORM_STATUS !== null) {
-    unset($_SESSION['form_status'], $_SESSION['form_message'], $_SESSION['form_data']);
+    unset($_SESSION['form_status'], $_SESSION['form_message']);
+    // Note: form_data is left in session for contact.php to use for form repopulation
 }
 ?>
 <!DOCTYPE html>

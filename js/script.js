@@ -156,7 +156,7 @@ if (contactForm) {
     // Set redirect_to to current page so flash notification appears here after submit
     if (redirectTo) {
         const page = window.location.pathname.split('/').pop() || 'index.php';
-        redirectTo.value = page || 'index.php';
+        redirectTo.value = page;
     }
 
     function openModal() {
