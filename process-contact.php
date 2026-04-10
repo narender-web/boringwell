@@ -57,6 +57,15 @@ if (empty($message) || strlen($message) < 10) {
 if (!empty($errors)) {
     $_SESSION['form_status']  = 'error';
     $_SESSION['form_message'] = implode(' ', $errors);
+    // Preserve submitted values so the form can be repopulated
+    $_SESSION['form_data'] = [
+        'name'    => $name,
+        'email'   => $email,
+        'phone'   => $phone,
+        'service' => $service,
+        'area'    => $area,
+        'message' => $message,
+    ];
     header('Location: contact.php');
     exit;
 }

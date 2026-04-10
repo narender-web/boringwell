@@ -95,12 +95,12 @@ if (fadeEls.length && 'IntersectionObserver' in window) {
     });
 
     const fadeObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
+        entries.forEach((entry, idx) => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                }, i * 80);
+                }, idx * 80);
                 fadeObserver.unobserve(entry.target);
             }
         });

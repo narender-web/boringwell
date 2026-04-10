@@ -9,7 +9,8 @@ if (empty($_SESSION['csrf_token'])) {
 // Pull status from session after form submission redirect
 $form_status  = $_SESSION['form_status']  ?? null;
 $form_message = $_SESSION['form_message'] ?? null;
-unset($_SESSION['form_status'], $_SESSION['form_message']);
+$form_data    = $_SESSION['form_data']    ?? [];
+unset($_SESSION['form_status'], $_SESSION['form_message'], $_SESSION['form_data']);
 
 $page_title = 'Contact Us';
 $page_desc  = 'Get in touch with Shankar Borewell for a free quote on borewell drilling, repair, or pump installation in Bangalore and Karnataka.';
@@ -104,12 +105,12 @@ include 'includes/header.php';
                         <div class="form-group">
                             <label for="name">Full Name <span style="color:#C62828">*</span></label>
                             <input type="text" id="name" name="name" placeholder="Your full name" required
-                                   value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>">
+                                   value="<?php echo htmlspecialchars($form_data['name'] ?? ''); ?>">
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address <span style="color:#C62828">*</span></label>
                             <input type="email" id="email" name="email" placeholder="your@email.com" required
-                                   value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>">
+                                   value="<?php echo htmlspecialchars($form_data['email'] ?? ''); ?>">
                         </div>
                     </div>
 
@@ -117,7 +118,7 @@ include 'includes/header.php';
                         <div class="form-group">
                             <label for="phone">Phone Number <span style="color:#C62828">*</span></label>
                             <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required
-                                   value="<?php echo htmlspecialchars($_POST['phone'] ?? ''); ?>">
+                                   value="<?php echo htmlspecialchars($form_data['phone'] ?? ''); ?>">
                         </div>
                         <div class="form-group">
                             <label for="service">Service Required</label>
@@ -127,7 +128,7 @@ include 'includes/header.php';
                                 $services = ['Borewell Drilling','Borewell Repair','Borewell Cleaning','Pump Installation','Casing & Lining','Water Testing','Other / Not Sure'];
                                 foreach ($services as $s): ?>
                                 <option value="<?php echo htmlspecialchars($s); ?>"
-                                    <?php echo (($_POST['service'] ?? '') === $s) ? 'selected' : ''; ?>>
+                                    <?php echo (($form_data['service'] ?? '') === $s) ? 'selected' : ''; ?>>
                                     <?php echo htmlspecialchars($s); ?>
                                 </option>
                                 <?php endforeach; ?>
@@ -138,13 +139,13 @@ include 'includes/header.php';
                     <div class="form-group">
                         <label for="area">Your Location / Area</label>
                         <input type="text" id="area" name="area" placeholder="e.g. Whitefield, Bangalore"
-                               value="<?php echo htmlspecialchars($_POST['area'] ?? ''); ?>">
+                               value="<?php echo htmlspecialchars($form_data['area'] ?? ''); ?>">
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message / Requirements <span style="color:#C62828">*</span></label>
                         <textarea id="message" name="message" rows="5"
-                                  placeholder="Tell us about your requirements – depth needed, soil type, purpose of borewell, etc." required><?php echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea>
+                                  placeholder="Tell us about your requirements – depth needed, soil type, purpose of borewell, etc." required><?php echo htmlspecialchars($form_data['message'] ?? ''); ?></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary" style="width:100%;padding:.875rem;font-size:1rem;">

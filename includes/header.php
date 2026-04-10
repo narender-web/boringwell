@@ -23,8 +23,7 @@ define('SITE_HOURS',   'Mon – Sat: 8:00 AM – 7:00 PM');
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-          integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plh7eecikan0JSSE7qzjpEntOV9PEg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer">
+          referrerpolicy="no-referrer">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
