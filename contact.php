@@ -1,20 +1,20 @@
 <?php
-session_start();
-
-// Generate CSRF token if one doesn't exist
-if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
-
 // Pull status from session after form submission redirect
-$form_status  = $_SESSION['form_status']  ?? null;
-$form_message = $_SESSION['form_message'] ?? null;
-$form_data    = $_SESSION['form_data']    ?? [];
-unset($_SESSION['form_status'], $_SESSION['form_message'], $_SESSION['form_data']);
+// (session_start and CSRF token are managed by includes/header.php)
+// After header.php is included, form status is in $_GLOBAL_FORM_STATUS / $_GLOBAL_FORM_MESSAGE
+$form_status  = null;
+$form_message = null;
+$form_data    = [];
 
 $page_title = 'Contact Us';
-$page_desc  = 'Get in touch with Shankar Borewell for a free quote on borewell drilling, repair, or pump installation in Bangalore and Karnataka.';
+$page_desc  = 'Get in touch with Ganga Boring for a free quote on borewell drilling, repair, or pump installation in Bangalore and Karnataka.';
 include 'includes/header.php';
+
+// After header.php is included, read the form status it captured from session
+$form_status  = $_GLOBAL_FORM_STATUS  ?? null;
+$form_message = $_GLOBAL_FORM_MESSAGE ?? null;
+$form_data    = $_SESSION['form_data'] ?? [];
+unset($_SESSION['form_data']);
 ?>
 
 <!-- Page Banner -->

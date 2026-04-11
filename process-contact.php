@@ -9,7 +9,7 @@ session_start();
 // Site constants (mirrored from includes/header.php)
 if (!defined('SITE_PHONE')) {
     define('SITE_PHONE', '+91 98765 43210');
-    define('SITE_EMAIL', 'info@shankarborewell.com');
+    define('SITE_EMAIL', 'online.narender@gmail.com');
 }
 
 // Only handle POST
@@ -18,12 +18,22 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+// Determine redirect destination early (modal submissions include a redirect_to field)
+$redirect_to = 'contact.php';
+if (!empty($_POST['redirect_to'])) {
+    $candidate = trim($_POST['redirect_to']);
+    // Only allow relative filenames in this directory (no slashes, no traversal)
+    if (preg_match('/^[a-zA-Z0-9_\-\.]+\.php$/', $candidate) && strpos($candidate, '..') === false) {
+        $redirect_to = $candidate;
+    }
+}
+
 // Validate CSRF token
 if (!isset($_POST['csrf_token'], $_SESSION['csrf_token'])
     || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
     $_SESSION['form_status']  = 'error';
     $_SESSION['form_message'] = 'Invalid form submission. Please try again.';
-    header('Location: contact.php');
+    header('Location: ' . $redirect_to);
     exit;
 }
 
@@ -66,14 +76,14 @@ if (!empty($errors)) {
         'area'    => $area,
         'message' => $message,
     ];
-    header('Location: contact.php');
+    header('Location: ' . $redirect_to);
     exit;
 }
 
 // -------------------------------------------------------
 // Email configuration — update these values as needed
 // -------------------------------------------------------
-$to      = 'info@shankarborewell.com';
+$to      = 'online.narender@gmail.com';
 $subject = 'New Enquiry from Website – ' . $name;
 
 $body  = "New Contact Form Submission\n";
@@ -84,10 +94,10 @@ $body .= "Phone   : {$phone}\n";
 $body .= "Service : {$service}\n";
 $body .= "Area    : {$area}\n\n";
 $body .= "Message :\n{$message}\n\n";
-$body .= "---\nSent from: " . ($_SERVER['HTTP_HOST'] ?? 'shankarborewell.com') . "\n";
+$body .= "---\nSent from: " . ($_SERVER['HTTP_HOST'] ?? 'gangaboring.com') . "\n";
 $body .= "Date     : " . date('Y-m-d H:i:s') . "\n";
 
-$headers  = "From: noreply@shankarborewell.com\r\n";
+$headers  = "From: noreply@gangaboring.com\r\n";
 $headers .= "Reply-To: {$email}\r\n";
 $headers .= "X-Mailer: PHP/" . PHP_VERSION . "\r\n";
 
@@ -104,5 +114,5 @@ if ($sent) {
 // Regenerate CSRF token for next submission
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
-header('Location: contact.php');
+header('Location: ' . $redirect_to);
 exit;

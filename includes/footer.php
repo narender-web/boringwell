@@ -86,6 +86,71 @@
 <!-- Back to Top -->
 <button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
+<!-- ===== Get Quote Modal ===== -->
+<div id="quote-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-container">
+        <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+        <div class="modal-header">
+            <div class="modal-icon"><i class="fas fa-clipboard-list"></i></div>
+            <h2 id="modal-title">Get a Free Quote</h2>
+            <p>Fill in your details and we'll get back to you within 24 hours.</p>
+        </div>
+
+        <div id="modal-alert" class="modal-alert" hidden></div>
+
+        <form id="quote-modal-form" action="process-contact.php" method="post" novalidate>
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+            <input type="hidden" name="redirect_to" id="modal-redirect-to" value="">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="modal-name">Full Name <span class="req">*</span></label>
+                    <input type="text" id="modal-name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email Address <span class="req">*</span></label>
+                    <input type="email" id="modal-email" name="email" placeholder="your@email.com" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="modal-phone">Phone Number <span class="req">*</span></label>
+                    <input type="tel" id="modal-phone" name="phone" placeholder="+91 98765 43210" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-service">Service Required</label>
+                    <select id="modal-service" name="service">
+                        <option value="">-- Select Service --</option>
+                        <option value="Borewell Drilling">Borewell Drilling</option>
+                        <option value="Borewell Repair">Borewell Repair</option>
+                        <option value="Borewell Cleaning">Borewell Cleaning</option>
+                        <option value="Pump Installation">Pump Installation</option>
+                        <option value="Casing &amp; Lining">Casing &amp; Lining</option>
+                        <option value="Water Testing">Water Testing</option>
+                        <option value="Other / Not Sure">Other / Not Sure</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="modal-area">Your Location / Area</label>
+                <input type="text" id="modal-area" name="area" placeholder="e.g. Whitefield, Bangalore">
+            </div>
+
+            <div class="form-group">
+                <label for="modal-message">Message / Requirements <span class="req">*</span></label>
+                <textarea id="modal-message" name="message" rows="4"
+                          placeholder="Tell us about your requirements – depth needed, purpose, etc." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary modal-submit-btn">
+                <i class="fas fa-paper-plane"></i>&nbsp; Send Enquiry
+            </button>
+        </form>
+    </div>
+</div>
+
 <!-- Script -->
 <script src="js/script.js"></script>
 </body>
