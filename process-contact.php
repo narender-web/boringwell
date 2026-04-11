@@ -94,10 +94,10 @@ $body .= "Phone   : {$phone}\n";
 $body .= "Service : {$service}\n";
 $body .= "Area    : {$area}\n\n";
 $body .= "Message :\n{$message}\n\n";
-$body .= "---\nSent from: " . ($_SERVER['HTTP_HOST'] ?? 'jituborwell.com') . "\n";
+$body .= "---\nSent from: " . ($_SERVER['HTTP_HOST'] ?? 'gangaboring.com') . "\n";
 $body .= "Date     : " . date('Y-m-d H:i:s') . "\n";
 
-$headers  = "From: noreply@jituborwell.com\r\n";
+$headers  = "From: noreply@gangaboring.com\r\n";
 $headers .= "Reply-To: {$email}\r\n";
 $headers .= "X-Mailer: PHP/" . PHP_VERSION . "\r\n";
 

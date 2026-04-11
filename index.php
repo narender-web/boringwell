@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Home';
-$page_desc  = 'Jitu Borwell – Professional borewell drilling, repair and pump installation in Bangalore. 20+ years experience. Call now for a free quote.';
+$page_desc  = 'Ganga Boring – Professional borewell drilling, repair and pump installation in Bangalore. 20+ years experience. Call now for a free quote.';
 include 'includes/header.php';
 ?>
 
@@ -128,10 +128,10 @@ include 'includes/header.php';
 
             <div class="about-content">
                 <div class="section-title" style="text-align:left;margin-bottom:1.5rem;">
-                    <h2>About Jitu Borwell</h2>
+                    <h2>About Ganga Boring</h2>
                     <span class="underline" style="margin:0.75rem 0 0;"></span>
                 </div>
-                <p>Since 2004, <strong>Jitu Borwell</strong> has been providing reliable, efficient, and affordable borewell solutions to thousands of satisfied customers across Bangalore and Karnataka.</p>
+                <p>Since 2004, <strong>Ganga Boring</strong> has been providing reliable, efficient, and affordable borewell solutions to thousands of satisfied customers across Bangalore and Karnataka.</p>
                 <p>Our team of licensed hydrogeologists and experienced drilling crews use modern equipment to ensure maximum success rates and water yield for every project.</p>
 
                 <div class="about-features">
@@ -200,8 +200,8 @@ include 'includes/header.php';
         <div class="testimonials-grid">
             <?php
             $testimonials = [
-                ['text'=>'Jitu Borwell drilled our borewell in just 2 days and we got excellent water yield. Their team was professional and clean. Highly recommended!', 'name'=>'Ramesh Kumar', 'loc'=>'Whitefield, Bangalore', 'init'=>'RK', 'cls'=>''],
-                ['text'=>'Our old borewell had gone dry. Jitu Borwell cleaned and restored it at a fraction of re-drilling cost. Excellent service and fair pricing.', 'name'=>'Sunita Patel',  'loc'=>'Mysuru, Karnataka',    'init'=>'SP', 'cls'=>'bg-accent'],
+                ['text'=>'Ganga Boring drilled our borewell in just 2 days and we got excellent water yield. Their team was professional and clean. Highly recommended!', 'name'=>'Ramesh Kumar', 'loc'=>'Whitefield, Bangalore', 'init'=>'RK', 'cls'=>''],
+                ['text'=>'Our old borewell had gone dry. Ganga Boring cleaned and restored it at a fraction of re-drilling cost. Excellent service and fair pricing.', 'name'=>'Sunita Patel',  'loc'=>'Mysuru, Karnataka',    'init'=>'SP', 'cls'=>'bg-accent'],
                 ['text'=>'Used their pump installation service. The team arrived on time, work was done neatly, and they explained everything clearly. Great experience!', 'name'=>'Gopal Reddy',  'loc'=>'Tumkur, Karnataka',    'init'=>'GR', 'cls'=>'bg-green'],
             ];
             foreach ($testimonials as $t): ?>

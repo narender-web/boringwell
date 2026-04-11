@@ -7,7 +7,7 @@ $form_message = null;
 $form_data    = [];
 
 $page_title = 'Contact Us';
-$page_desc  = 'Get in touch with Jitu Borwell for a free quote on borewell drilling, repair, or pump installation in Bangalore and Karnataka.';
+$page_desc  = 'Get in touch with Ganga Boring for a free quote on borewell drilling, repair, or pump installation in Bangalore and Karnataka.';
 include 'includes/header.php';
 
 // After header.php is included, read the form status it captured from session

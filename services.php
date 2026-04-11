@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Our Services';
-$page_desc  = 'Explore Jitu Borwell\'s full range of services: drilling, repair, cleaning, pump installation, casing, and water testing in Bangalore and Karnataka.';
+$page_desc  = 'Explore Ganga Boring\'s full range of services: drilling, repair, cleaning, pump installation, casing, and water testing in Bangalore and Karnataka.';
 include 'includes/header.php';
 ?>
 
