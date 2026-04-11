@@ -1,0 +1,13 @@
+{
+    "name": "gangaboring/website",
+    "description": "Ganga Boring website",
+    "authors": [
+        {
+            "name": "Narender",
+            "email": "online.narender@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    }
+}
