@@ -1027,10 +1027,14 @@ footer.main-footer {
     .about-grid      { grid-template-columns: 1fr; }
     .contact-grid    { grid-template-columns: 1fr; }
     .footer-grid     { grid-template-columns: 1fr 1fr; }
+    .section-title        { margin-bottom: 2rem; }
+    .about-image-wrapper  { text-align: center; }
+    .experience-badge     { position: static; margin-top: 1.5rem; display: inline-block; }
 }
 
 @media (max-width: 768px) {
     .top-bar .container { flex-direction: column; text-align: center; }
+    .top-bar-left span:nth-child(3) { display: none; }
     .nav-links {
         display: none;
         position: absolute;
@@ -1050,12 +1054,41 @@ footer.main-footer {
     .hamburger { display: flex; }
     .form-row  { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
+    .hero             { padding: 3rem 0 2.5rem; }
+    .hero-stats       { gap: 1.25rem; }
+    .about-grid       { gap: 2rem; }
+    .services-section,
+    .about-section,
+    .why-section,
+    .testimonials-section,
+    .areas-section,
+    .gallery-section,
+    .contact-section  { padding: 3rem 0; }
+    .counters-section { padding: 2.5rem 0; }
+    .cta-section      { padding: 2.5rem 0 !important; }
+    .cta-section .btn { margin: .4rem !important; }
 }
 
 @media (max-width: 480px) {
-    .counters-grid { grid-template-columns: 1fr 1fr; }
+    .top-bar-left span:nth-child(n+2) { display: none; }
+    .counters-grid      { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
     .hero-card-features { grid-template-columns: 1fr; }
-    .experience-badge { position: static; margin-top: 1.5rem; display: inline-block; }
+    .hero               { padding: 2.5rem 0 2rem; }
+    .hero-stats         { gap: 1rem; }
+    .hero-stat .number  { font-size: 1.4rem; }
+    .services-section,
+    .about-section,
+    .why-section,
+    .testimonials-section,
+    .areas-section,
+    .gallery-section,
+    .contact-section    { padding: 2.5rem 0; }
+    .counters-section   { padding: 2rem 0; }
+    .areas-grid         { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+    .section-title      { margin-bottom: 1.5rem; }
+    .modal-container    { padding: 1.5rem 1.25rem 1.25rem; }
+    .cta-section .btn   { display: block; width: 80%; max-width: 260px; margin: 0 auto .75rem !important; }
+    .footer-bottom .container { text-align: center; justify-content: center; }
 }
 
 /* ===========================

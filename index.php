@@ -241,7 +241,7 @@ include 'includes/header.php';
 </section>
 
 <!-- ===== CTA STRIP ===== -->
-<section style="background:var(--accent);padding:3rem 0;">
+<section class="cta-section" style="background:var(--accent);padding:3rem 0;">
     <div class="container text-center">
         <h2 style="color:#fff;margin-bottom:.75rem;">Need a Borewell? Let's Talk!</h2>
         <p style="color:rgba(255,255,255,.9);margin-bottom:1.75rem;max-width:550px;margin-left:auto;margin-right:auto;">Our team is ready to help. Contact us today for a free site survey and competitive quote.</p>
