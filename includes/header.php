@@ -3,7 +3,7 @@
 define('SITE_NAME',    'Ganga Boring');
 define('SITE_PHONE',   '+91 98765 43210');
 define('SITE_PHONE2',  '+91 98765 43211');
-define('SITE_EMAIL',   'online.narender@gmail.com');
+define('SITE_EMAIL',   'jitu@gangaborwellharyana.com');
 define('SITE_ADDRESS', 'No. 12, Main Road, Bangalore - 560001, Karnataka, India');
 define('SITE_HOURS',   'Mon – Sat: 8:00 AM – 7:00 PM');
 

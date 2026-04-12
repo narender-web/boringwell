@@ -227,12 +227,12 @@ include 'includes/header.php';
         <div class="section-title">
             <h2>Areas We Serve</h2>
             <span class="underline"></span>
-            <p>Providing borewell services across Bangalore and major districts of Karnataka.</p>
+            <p>Providing borewell services across the NCR region and surrounding districts of Haryana.</p>
         </div>
 
         <div class="areas-grid">
             <?php
-            $areas = ['Whitefield','Koramangala','Marathahalli','Electronic City','Jayanagar','JP Nagar','Hebbal','Yelahanka','Mysuru','Tumkur','Mandya','Hassan','Ramanagara','Kolar','Chikkaballapur','Doddaballapur','Nelamangala','Devanahalli'];
+            $areas = ['New Delhi','Noida','Greater Noida','Gurgaon (Gurugram)','Faridabad','Ghaziabad','Indirapuram','Vasundhara','Dwarka','Rohini','Sonipat','Panipat','Bahadurgarh','Manesar','Ballabhgarh','Palwal','Meerut','Rewari'];
             foreach ($areas as $a): ?>
             <div class="area-item"><i class="fas fa-map-marker-alt"></i><?php echo htmlspecialchars($a); ?></div>
             <?php endforeach; ?>

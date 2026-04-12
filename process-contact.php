@@ -19,7 +19,7 @@ use PHPMailer\PHPMailer\Exception;
 // Site constants (mirrored from includes/header.php)
 if (!defined('SITE_PHONE')) {
     define('SITE_PHONE', '+91 98765 43210');
-    define('SITE_EMAIL', 'online.narender@gmail.com');
+    define('SITE_EMAIL', 'jitu@gangaborwellharyana.com');
 }
 
 // Only handle POST
@@ -106,7 +106,7 @@ try {
     $mail->Port       = SMTP_PORT;
 
     $mail->setFrom(SMTP_FROM, SMTP_FROM_NAME);
-    $mail->addAddress('online.narender@gmail.com', 'Ganga Boring');
+    $mail->addAddress('jitu@gangaborwellharyana.com', 'Ganga Boring');
     $mail->addReplyTo($email, $name);
 
     $mail->Subject = 'New Enquiry from Website – ' . $name;

@@ -1236,3 +1236,32 @@ footer.main-footer {
 @media (max-width: 600px) {
     .modal-container { padding: 2rem 1.25rem 1.5rem; }
 }
+
+/* ===========================
+   Services Detail Page Grid
+=========================== */
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.service-detail-grid.flip { direction: rtl; }
+.service-detail-grid.flip > * { direction: ltr; }
+
+@media (max-width: 768px) {
+    .service-detail-grid,
+    .service-detail-grid.flip {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 2rem;
+    }
+    .service-detail-grid .service-icon-box {
+        height: 220px !important;
+        font-size: 3.5rem !important;
+    }
+    .service-detail-grid .feature-list {
+        grid-template-columns: 1fr !important;
+    }
+}
