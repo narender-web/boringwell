@@ -13,7 +13,7 @@
                         <span class="brand-tagline">Borewell Experts</span>
                     </div>
                 </div>
-                <p>Your trusted partner for professional borewell drilling, repair, and pump installation services across Bangalore and Karnataka. Licensed, insured &amp; serving since 2004.</p>
+                <p>Your trusted partner for professional borewell drilling, repair, and pump installation services across Gurgaon and Haryana. Licensed, insured &amp; serving since 2004.</p>
                 <div class="footer-social">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -135,7 +135,7 @@
 
             <div class="form-group">
                 <label for="modal-area">Your Location / Area</label>
-                <input type="text" id="modal-area" name="area" placeholder="e.g. Whitefield, Bangalore">
+                <input type="text" id="modal-area" name="area" placeholder="e.g. Sector 56, Gurgaon">
             </div>
 
             <div class="form-group">

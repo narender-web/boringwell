@@ -1,6 +1,6 @@
 <?php
 $page_title = 'About Us';
-$page_desc  = 'Learn about Ganga Boring – 20+ years of professional borewell drilling and water solutions in Bangalore and Karnataka.';
+$page_desc  = 'Learn about Ganga Boring – 20+ years of professional borewell drilling and water solutions in Gurgaon and Haryana.';
 include 'includes/header.php';
 ?>
 
@@ -15,10 +15,10 @@ include 'includes/header.php';
     <div class="container">
         <div class="about-grid">
             <div class="about-image-wrapper">
-                <div class="about-img-placeholder">
-                    <span>🏗️</span>
-                    <p>20+ Years of Excellence</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&auto=format&fit=crop&q=80"
+                     alt="Ganga Boring team at work in Haryana"
+                     class="about-img-main"
+                     loading="lazy">
                 <div class="experience-badge">
                     <div class="years">20+</div>
                     <div class="badge-text">Years of<br>Excellence</div>
@@ -31,7 +31,7 @@ include 'includes/header.php';
                     <span class="underline" style="margin:.75rem 0 0;"></span>
                 </div>
 
-                <p>Founded in 2004 by <strong>Mr. Ganga</strong>, Ganga Boring began as a small one-rig operation in Bangalore and has grown into one of Karnataka's most trusted borewell service providers.</p>
+                <p>Founded in 2004 by <strong>Mr. Ganga</strong>, Ganga Boring began as a small one-rig operation in Gurgaon and has grown into one of Haryana's most trusted borewell service providers.</p>
 
                 <p>We specialize in new borewell drilling, borewell repair, borewell cleaning, submersible pump installation, PVC casing, and water quality testing. Our licensed team of hydrogeologists and experienced drill operators serves residential, commercial, industrial, and agricultural clients.</p>
 
@@ -40,7 +40,7 @@ include 'includes/header.php';
                 <div class="about-features">
                     <?php
                     $features = [
-                        ['title'=>'Licensed & Certified',        'desc'=>'Registered with Karnataka CGWB, BWSSB approved contractor.'],
+                        ['title'=>'Licensed & Certified',        'desc'=>'Registered with Haryana CGWB, HUDA approved contractor.'],
                         ['title'=>'Modern Drilling Equipment',   'desc'=>'DTH air rotary and mud rotary rigs for all soil conditions.'],
                         ['title'=>'Experienced Team',            'desc'=>'25+ trained professionals with a combined 100+ years experience.'],
                         ['title'=>'ISO Quality Standards',       'desc'=>'Work carried out to IS 14220 borewell construction standards.'],
@@ -72,8 +72,8 @@ include 'includes/header.php';
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
             <?php
             $mv = [
-                ['icon'=>'🎯','title'=>'Our Mission', 'text'=>'To provide affordable, reliable, and scientifically sound borewell solutions that ensure every family, farm, and business in Karnataka has access to clean groundwater.'],
-                ['icon'=>'🌟','title'=>'Our Vision',  'text'=>'To be the most trusted name in groundwater development in South India, combining modern technology with ethical business practices.'],
+                ['icon'=>'🎯','title'=>'Our Mission', 'text'=>'To provide affordable, reliable, and scientifically sound borewell solutions that ensure every family, farm, and business in Haryana has access to clean groundwater.'],
+                ['icon'=>'🌟','title'=>'Our Vision',  'text'=>'To be the most trusted name in groundwater development in North India, combining modern technology with ethical business practices.'],
                 ['icon'=>'💎','title'=>'Our Values',  'text'=>'Integrity in pricing, excellence in workmanship, respect for the environment, and dedication to customer satisfaction guide every project we undertake.'],
             ];
             foreach ($mv as $item): ?>

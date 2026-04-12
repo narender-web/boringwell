@@ -7,7 +7,7 @@ $form_message = null;
 $form_data    = [];
 
 $page_title = 'Contact Us';
-$page_desc  = 'Get in touch with Ganga Boring for a free quote on borewell drilling, repair, or pump installation in Bangalore and Karnataka.';
+$page_desc  = 'Get in touch with Ganga Boring for a free quote on borewell drilling, repair, or pump installation in Gurgaon and Haryana.';
 include 'includes/header.php';
 
 // After header.php is included, read the form status it captured from session
@@ -74,8 +74,8 @@ unset($_SESSION['form_data']);
                 <div style="margin-top:2rem;border-radius:12px;overflow:hidden;border:1px solid var(--border);">
                     <div style="background:var(--light-bg);height:220px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:var(--text-gray);">
                         <span style="font-size:2.5rem;">📍</span>
-                        <p style="font-size:.9rem;">Map – Bangalore, Karnataka</p>
-                        <a href="https://maps.google.com/?q=Bangalore,Karnataka" target="_blank" rel="noopener noreferrer"
+                        <p style="font-size:.9rem;">Map – Gurgaon, Haryana</p>
+                        <a href="https://maps.google.com/?q=Gurgaon,Haryana" target="_blank" rel="noopener noreferrer"
                            style="font-size:.82rem;color:var(--primary);font-weight:600;">View on Google Maps →</a>
                     </div>
                 </div>
@@ -138,7 +138,7 @@ unset($_SESSION['form_data']);
 
                     <div class="form-group">
                         <label for="area">Your Location / Area</label>
-                        <input type="text" id="area" name="area" placeholder="e.g. Whitefield, Bangalore"
+                        <input type="text" id="area" name="area" placeholder="e.g. Sector 56, Gurgaon"
                                value="<?php echo htmlspecialchars($form_data['area'] ?? ''); ?>">
                     </div>
 
@@ -169,12 +169,12 @@ unset($_SESSION['form_data']);
         <div style="max-width:800px;margin:0 auto;">
             <?php
             $faqs = [
-                ['q'=>'How deep do you drill?',                   'a'=>'We drill up to 1000 feet depending on geology. Most residential borewells in Bangalore range from 200–600 feet.'],
+                ['q'=>'How deep do you drill?',                   'a'=>'We drill up to 1000 feet depending on geology. Most residential borewells in Gurgaon range from 200–600 feet.'],
                 ['q'=>'How long does drilling take?',             'a'=>'A standard borewell can be drilled in 1–3 days depending on depth and soil conditions.'],
                 ['q'=>'Do you provide a free site survey?',       'a'=>'Yes! We conduct a complimentary geophysical survey (resistivity test) before drilling to identify the best water-bearing zones.'],
                 ['q'=>'What if the borewell is dry?',             'a'=>'If water is not found at the agreed depth, we do not charge for drilling beyond the agreed free-drilling limit. Terms are clearly stated in our contract.'],
                 ['q'=>'Do you give any warranty?',                'a'=>'We provide a 1-year workmanship warranty on all drilling and installation work. Pump warranties are as per manufacturer terms.'],
-                ['q'=>'Which areas do you service?',              'a'=>'We cover all of Bangalore and major towns across Karnataka including Mysuru, Tumkur, Mandya, Hassan, Kolar, and more.'],
+                ['q'=>'Which areas do you service?',              'a'=>'We cover all of Gurgaon and major towns across Haryana including Faridabad, Manesar, Rohtak, Panipat, Karnal, and more.'],
             ];
             foreach ($faqs as $i => $faq): ?>
             <details style="background:var(--white);border-radius:8px;margin-bottom:1rem;border:1px solid var(--border);overflow:hidden;">

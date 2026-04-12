@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Home';
-$page_desc  = 'Ganga Boring – Professional borewell drilling, repair and pump installation in Bangalore. 20+ years experience. Call now for a free quote.';
+$page_desc  = 'Ganga Boring – Professional borewell drilling, repair and pump installation in Gurgaon. 20+ years experience. Call now for a free quote.';
 include 'includes/header.php';
 ?>
 
@@ -10,7 +10,7 @@ include 'includes/header.php';
         <div class="hero-content">
             <span class="badge"><i class="fas fa-award"></i> &nbsp;Trusted Since 2004</span>
             <h1>Expert <span>Borewell</span><br>Services You Can Trust</h1>
-            <p>Professional borewell drilling, repair, and pump installation services across Bangalore and Karnataka. Licensed engineers, modern equipment, and guaranteed results.</p>
+            <p>Professional borewell drilling, repair, and pump installation services across Gurgaon and Haryana. Licensed engineers, modern equipment, and guaranteed results.</p>
             <div class="hero-actions">
                 <a href="contact.php" class="btn btn-primary" data-modal="quote"><i class="fas fa-phone-alt"></i>&nbsp; Get Free Quote</a>
                 <a href="services.php" class="btn btn-outline"><i class="fas fa-list"></i>&nbsp; Our Services</a>
@@ -116,10 +116,10 @@ include 'includes/header.php';
     <div class="container">
         <div class="about-grid">
             <div class="about-image-wrapper">
-                <div class="about-img-placeholder">
-                    <span>🏗️</span>
-                    <p>Borewell Drilling Site</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80"
+                     alt="Borewell drilling site in Gurgaon, Haryana"
+                     class="about-img-main"
+                     loading="lazy">
                 <div class="experience-badge">
                     <div class="years">20+</div>
                     <div class="badge-text">Years of<br>Excellence</div>
@@ -131,13 +131,13 @@ include 'includes/header.php';
                     <h2>About Ganga Boring</h2>
                     <span class="underline" style="margin:0.75rem 0 0;"></span>
                 </div>
-                <p>Since 2004, <strong>Ganga Boring</strong> has been providing reliable, efficient, and affordable borewell solutions to thousands of satisfied customers across Bangalore and Karnataka.</p>
+                <p>Since 2004, <strong>Ganga Boring</strong> has been providing reliable, efficient, and affordable borewell solutions to thousands of satisfied customers across Gurgaon and Haryana.</p>
                 <p>Our team of licensed hydrogeologists and experienced drilling crews use modern equipment to ensure maximum success rates and water yield for every project.</p>
 
                 <div class="about-features">
                     <?php
                     $features = [
-                        ['title'=>'Licensed & Certified',  'desc'=>'Fully licensed by Karnataka CGWB and insured for all operations.'],
+                        ['title'=>'Licensed & Certified',  'desc'=>'Fully licensed by Haryana CGWB and insured for all operations.'],
                         ['title'=>'Modern Equipment',      'desc'=>'DTH and rotary drilling rigs capable of drilling up to 1000 ft.'],
                         ['title'=>'Free Site Survey',      'desc'=>'Complimentary geophysical survey before drilling to maximize success.'],
                         ['title'=>'24/7 Support',          'desc'=>'Round-the-clock emergency repair and support for all clients.'],
@@ -174,7 +174,7 @@ include 'includes/header.php';
                 ['icon'=>'⚡', 'title'=>'Fast Turnaround',        'desc'=>'Most borewells completed within 1–3 days. Minimal site disruption.'],
                 ['icon'=>'💰', 'title'=>'Transparent Pricing',   'desc'=>'No hidden costs. Detailed quote before work begins.'],
                 ['icon'=>'🛡️', 'title'=>'Workmanship Warranty', 'desc'=>'1-year warranty on all drilling and installation work.'],
-                ['icon'=>'🚚', 'title'=>'Statewide Coverage',    'desc'=>'Operating across Karnataka — urban, suburban &amp; rural areas.'],
+                ['icon'=>'🚚', 'title'=>'Statewide Coverage',    'desc'=>'Operating across Haryana — urban, suburban &amp; rural areas.'],
                 ['icon'=>'📞', 'title'=>'24/7 Emergency',        'desc'=>'Emergency repair team available round the clock, every day of the year.'],
             ];
             foreach ($why as $w): ?>
@@ -194,15 +194,15 @@ include 'includes/header.php';
         <div class="section-title">
             <h2>What Our Clients Say</h2>
             <span class="underline"></span>
-            <p>Trusted by hundreds of homeowners, farmers, and businesses across Karnataka.</p>
+            <p>Trusted by hundreds of homeowners, farmers, and businesses across Haryana.</p>
         </div>
 
         <div class="testimonials-grid">
             <?php
             $testimonials = [
-                ['text'=>'Ganga Boring drilled our borewell in just 2 days and we got excellent water yield. Their team was professional and clean. Highly recommended!', 'name'=>'Ramesh Kumar', 'loc'=>'Whitefield, Bangalore', 'init'=>'RK', 'cls'=>''],
-                ['text'=>'Our old borewell had gone dry. Ganga Boring cleaned and restored it at a fraction of re-drilling cost. Excellent service and fair pricing.', 'name'=>'Sunita Patel',  'loc'=>'Mysuru, Karnataka',    'init'=>'SP', 'cls'=>'bg-accent'],
-                ['text'=>'Used their pump installation service. The team arrived on time, work was done neatly, and they explained everything clearly. Great experience!', 'name'=>'Gopal Reddy',  'loc'=>'Tumkur, Karnataka',    'init'=>'GR', 'cls'=>'bg-green'],
+                ['text'=>'Ganga Boring drilled our borewell in just 2 days and we got excellent water yield. Their team was professional and clean. Highly recommended!', 'name'=>'Ramesh Kumar', 'loc'=>'Sector 56, Gurgaon',    'init'=>'RK', 'cls'=>''],
+                ['text'=>'Our old borewell had gone dry. Ganga Boring cleaned and restored it at a fraction of re-drilling cost. Excellent service and fair pricing.', 'name'=>'Sunita Patel',  'loc'=>'Faridabad, Haryana',  'init'=>'SP', 'cls'=>'bg-accent'],
+                ['text'=>'Used their pump installation service. The team arrived on time, work was done neatly, and they explained everything clearly. Great experience!', 'name'=>'Gopal Reddy',  'loc'=>'Manesar, Haryana',    'init'=>'GR', 'cls'=>'bg-green'],
             ];
             foreach ($testimonials as $t): ?>
             <div class="testimonial-card">
