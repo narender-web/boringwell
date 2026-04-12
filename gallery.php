@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Gallery';
-$page_desc  = 'View photos of our borewell drilling, repair, and pump installation projects across Bangalore and Karnataka.';
+$page_desc  = 'View photos of our borewell drilling, repair, and pump installation projects across Gurgaon and Haryana.';
 include 'includes/header.php';
 ?>
 
@@ -16,7 +16,7 @@ include 'includes/header.php';
         <div class="section-title">
             <h2>Our Recent Projects</h2>
             <span class="underline"></span>
-            <p>A glimpse of our work across Bangalore and Karnataka. Each project reflects our commitment to quality and precision.</p>
+            <p>A glimpse of our work across Gurgaon and Haryana. Each project reflects our commitment to quality and precision.</p>
         </div>
 
         <!-- Filter Tabs -->
@@ -34,25 +34,26 @@ include 'includes/header.php';
         <div class="gallery-grid" id="gallery-grid">
             <?php
             $items = [
-                ['cat'=>'drilling',          'icon'=>'🔩', 'label'=>'Borewell Drilling – Whitefield',    'gradient'=>'135deg, var(--primary) 0%, var(--primary-dark) 100%'],
-                ['cat'=>'pump-installation', 'icon'=>'⚙️', 'label'=>'Pump Installed – Koramangala',      'gradient'=>'135deg, #1976D2 0%, var(--primary) 100%'],
-                ['cat'=>'repair',            'icon'=>'🔧', 'label'=>'Borewell Repair – Mysuru',          'gradient'=>'135deg, #2E7D32 0%, #1B5E20 100%'],
-                ['cat'=>'cleaning',          'icon'=>'🫧', 'label'=>'Borewell Cleaning – Tumkur',        'gradient'=>'135deg, var(--accent) 0%, var(--accent-dark) 100%'],
-                ['cat'=>'casing',            'icon'=>'🏗️', 'label'=>'PVC Casing – Electronic City',     'gradient'=>'135deg, #6A1B9A 0%, #4A148C 100%'],
-                ['cat'=>'drilling',          'icon'=>'💧', 'label'=>'New Drilling – Hebbal',             'gradient'=>'135deg, #00695C 0%, #004D40 100%'],
-                ['cat'=>'pump-installation', 'icon'=>'⚡', 'label'=>'Submersible Pump – Marathahalli',   'gradient'=>'135deg, #1565C0 0%, #283593 100%'],
-                ['cat'=>'repair',            'icon'=>'🔬', 'label'=>'CCTV Inspection – Jayanagar',       'gradient'=>'135deg, #C62828 0%, #B71C1C 100%'],
-                ['cat'=>'drilling',          'icon'=>'🏗️', 'label'=>'Agricultural Borewell – Kolar',    'gradient'=>'135deg, #558B2F 0%, #33691E 100%'],
-                ['cat'=>'cleaning',          'icon'=>'💦', 'label'=>'Yield Restoration – Yelahanka',     'gradient'=>'135deg, #00838F 0%, #006064 100%'],
-                ['cat'=>'casing',            'icon'=>'🔩', 'label'=>'MS Casing – Devanahalli',           'gradient'=>'135deg, #4527A0 0%, #311B92 100%'],
-                ['cat'=>'pump-installation', 'icon'=>'🚿', 'label'=>'Kirloskar Pump – Ramanagara',       'gradient'=>'135deg, #EF6C00 0%, #E65100 100%'],
+                ['cat'=>'drilling',          'label'=>'Borewell Drilling – DLF Phase 1, Gurgaon',  'img'=>'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&auto=format&fit=crop&q=80'],
+                ['cat'=>'pump-installation', 'label'=>'Pump Installed – Cyber City, Gurgaon',       'img'=>'https://images.unsplash.com/photo-1558618047-3c8c76ca7a3d?w=600&h=450&auto=format&fit=crop&q=80'],
+                ['cat'=>'repair',            'label'=>'Borewell Repair – Faridabad, Haryana',        'img'=>'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=450&auto=format&fit=crop&q=80'],
+                ['cat'=>'cleaning',          'label'=>'Borewell Cleaning – Manesar, Haryana',        'img'=>'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&auto=format&fit=crop&q=80'],
+                ['cat'=>'casing',            'label'=>'PVC Casing – Sohna Road, Gurgaon',            'img'=>'https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=600&h=450&auto=format&fit=crop&q=80'],
+                ['cat'=>'drilling',          'label'=>'New Drilling – Palam Vihar, Gurgaon',          'img'=>'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&auto=format&fit=crop&q=80&crop=entropy'],
+                ['cat'=>'pump-installation', 'label'=>'Submersible Pump – Sector 82, Gurgaon',        'img'=>'https://images.unsplash.com/photo-1583675931520-c27b22264ccc?w=600&h=450&auto=format&fit=crop&q=80'],
+                ['cat'=>'repair',            'label'=>'CCTV Inspection – Bahadurgarh, Haryana',       'img'=>'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&h=450&auto=format&fit=crop&q=80'],
+                ['cat'=>'drilling',          'label'=>'Agricultural Borewell – Rewari, Haryana',      'img'=>'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&h=450&auto=format&fit=crop&q=80'],
+                ['cat'=>'cleaning',          'label'=>'Yield Restoration – Panipat, Haryana',         'img'=>'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&auto=format&fit=crop&q=80&crop=entropy'],
+                ['cat'=>'casing',            'label'=>'MS Casing – Karnal, Haryana',                  'img'=>'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&auto=format&fit=crop&q=80&crop=faces'],
+                ['cat'=>'pump-installation', 'label'=>'Kirloskar Pump – Sonipat, Haryana',            'img'=>'https://images.unsplash.com/photo-1558618047-3c8c76ca7a3d?w=600&h=450&auto=format&fit=crop&q=80&crop=entropy'],
             ];
             foreach ($items as $item): ?>
             <div class="gallery-item" data-cat="<?php echo $item['cat']; ?>">
-                <div class="placeholder-img" style="background:linear-gradient(<?php echo $item['gradient']; ?>);">
-                    <span style="font-size:2.8rem;"><?php echo $item['icon']; ?></span>
-                    <p><?php echo htmlspecialchars($item['label']); ?></p>
-                </div>
+                <img src="<?php echo htmlspecialchars($item['img']); ?>"
+                     alt="<?php echo htmlspecialchars($item['label']); ?>"
+                     class="gallery-photo"
+                     loading="lazy">
+                <div class="gallery-caption"><?php echo htmlspecialchars($item['label']); ?></div>
                 <div class="gallery-overlay"><i class="fas fa-expand-alt"></i></div>
             </div>
             <?php endforeach; ?>

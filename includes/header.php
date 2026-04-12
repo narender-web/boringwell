@@ -4,7 +4,7 @@ define('SITE_NAME',    'Ganga Boring');
 define('SITE_PHONE',   '+91 98765 43210');
 define('SITE_PHONE2',  '+91 98765 43211');
 define('SITE_EMAIL',   'jitu@gangaborwellharyana.com');
-define('SITE_ADDRESS', 'No. 12, Main Road, Bangalore - 560001, Karnataka, India');
+define('SITE_ADDRESS', 'No. 12, Main Road, Gurgaon - 122001, Haryana, India');
 define('SITE_HOURS',   'Mon – Sat: 8:00 AM – 7:00 PM');
 
 // Session + CSRF management (shared across all pages)
@@ -29,8 +29,8 @@ if ($_GLOBAL_FORM_STATUS !== null) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo isset($page_title) ? htmlspecialchars($page_title) . ' | ' . SITE_NAME : SITE_NAME . ' – Professional Borewell Services'; ?></title>
-    <meta name="description" content="<?php echo isset($page_desc) ? htmlspecialchars($page_desc) : 'Ganga Boring offers professional borewell drilling, repair, and pump installation services across Bangalore and Karnataka. 24/7 service, 20+ years experience.'; ?>">
-    <meta name="keywords" content="borewell drilling, borewell repair, water borewell, pump installation, Bangalore borewell, Karnataka borewell">
+    <meta name="description" content="<?php echo isset($page_desc) ? htmlspecialchars($page_desc) : 'Ganga Boring offers professional borewell drilling, repair, and pump installation services across Gurgaon and Haryana. 24/7 service, 20+ years experience.'; ?>">
+    <meta name="keywords" content="borewell drilling, borewell repair, water borewell, pump installation, Gurgaon borewell, Haryana borewell">
 
     <!-- Open Graph -->
     <meta property="og:title"       content="<?php echo SITE_NAME; ?> – Professional Borewell Services">

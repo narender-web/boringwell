@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Our Services';
-$page_desc  = 'Explore Ganga Boring\'s full range of services: drilling, repair, cleaning, pump installation, casing, and water testing in Bangalore and Karnataka.';
+$page_desc  = 'Explore Ganga Boring\'s full range of services: drilling, repair, cleaning, pump installation, casing, and water testing in Gurgaon and Haryana.';
 include 'includes/header.php';
 ?>
 
@@ -25,7 +25,8 @@ include 'includes/header.php';
 $services = [
     [
         'id'      => 'drilling',
-        'icon'    => '🔩',
+        'img'     => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&h=300&auto=format&fit=crop&q=80',
+        'alt'     => 'Borewell drilling rig at a site in Gurgaon',
         'title'   => 'Borewell Drilling',
         'tagline' => 'New borewell construction for residential, commercial &amp; agricultural use',
         'desc'    => 'We deploy advanced DTH (Down-the-Hole) hammer and rotary drilling rigs capable of drilling up to 1000 ft in various geological formations. Every project begins with a free geophysical survey to pinpoint optimal water-bearing zones.',
@@ -33,7 +34,8 @@ $services = [
     ],
     [
         'id'      => 'repair',
-        'icon'    => '🔧',
+        'img'     => 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=700&h=300&auto=format&fit=crop&q=80',
+        'alt'     => 'Borewell repair work by a technician',
         'title'   => 'Borewell Repair',
         'tagline' => 'Restore failing borewells to peak performance',
         'desc'    => 'A failing or dry borewell is often repairable at far less cost than re-drilling. Our diagnostic team uses downhole cameras to assess damage, casing collapse, sand infiltration, and other issues before recommending the best repair strategy.',
@@ -41,7 +43,8 @@ $services = [
     ],
     [
         'id'      => 'cleaning',
-        'icon'    => '🫧',
+        'img'     => 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&h=300&auto=format&fit=crop&q=80',
+        'alt'     => 'High-pressure borewell cleaning in progress',
         'title'   => 'Borewell Cleaning',
         'tagline' => 'Increase water yield with professional cleaning',
         'desc'    => 'Over time, borewells accumulate biofouling, iron bacteria, and mineral deposits that reduce yield. Our high-pressure air and water jetting, combined with safe chemical treatment, can restore up to 80% of lost yield.',
@@ -49,7 +52,8 @@ $services = [
     ],
     [
         'id'      => 'pump',
-        'icon'    => '⚙️',
+        'img'     => 'https://images.unsplash.com/photo-1558618047-3c8c76ca7a3d?w=700&h=300&auto=format&fit=crop&q=80',
+        'alt'     => 'Submersible pump installation by Ganga Boring',
         'title'   => 'Pump Installation',
         'tagline' => 'Expert supply & installation of submersible and jet pumps',
         'desc'    => 'We supply and install submersible and jet pumps from leading brands including Grundfos, Kirloskar, CRI, and Texmo. Our electricians handle complete wiring, control panels, and starter boxes.',
@@ -57,7 +61,8 @@ $services = [
     ],
     [
         'id'      => 'casing',
-        'icon'    => '🏗️',
+        'img'     => 'https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=700&h=300&auto=format&fit=crop&q=80',
+        'alt'     => 'PVC casing and lining for borewell protection',
         'title'   => 'Casing & Lining',
         'tagline' => 'Protect your borewell with quality casing and lining',
         'desc'    => 'Proper casing prevents borewell collapse and groundwater contamination. We supply and install IS-certified PVC screen casing, HDPE casing, and MS steel casing for all soil types and depths.',
@@ -65,7 +70,8 @@ $services = [
     ],
     [
         'id'      => 'water-testing',
-        'icon'    => '🔬',
+        'img'     => 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=700&h=300&auto=format&fit=crop&q=80',
+        'alt'     => 'Water quality testing in a laboratory',
         'title'   => 'Water Testing',
         'tagline' => 'Know the quality of water from your borewell',
         'desc'    => 'Safe drinking water starts with proper testing. We offer field and laboratory-based water quality analysis covering physical, chemical, and biological parameters, with detailed reports and treatment recommendations.',
@@ -83,10 +89,10 @@ foreach ($services as $idx => $svc):
 
             <!-- Visual -->
             <div>
-                <div class="service-icon-box" style="width:100%;height:300px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--white);font-size:5rem;gap:.75rem;">
-                    <?php echo $svc['icon']; ?>
-                    <span style="font-size:1rem;opacity:.85;"><?php echo htmlspecialchars($svc['title']); ?></span>
-                </div>
+                <img src="<?php echo htmlspecialchars($svc['img']); ?>"
+                     alt="<?php echo htmlspecialchars($svc['alt']); ?>"
+                     class="service-visual-img"
+                     loading="lazy">
             </div>
 
             <!-- Content -->
