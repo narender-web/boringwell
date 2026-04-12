@@ -79,24 +79,24 @@ foreach ($services as $idx => $svc):
 ?>
 <section id="<?php echo $svc['id']; ?>" style="padding:5rem 0;background:<?php echo $bg; ?>;">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;<?php echo $flip ? 'direction:rtl' : ''; ?>">
+        <div class="service-detail-grid<?php echo $flip ? ' flip' : ''; ?>">
 
             <!-- Visual -->
-            <div style="<?php echo $flip ? 'direction:ltr' : ''; ?>">
-                <div style="width:100%;height:300px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--white);font-size:5rem;gap:.75rem;">
+            <div>
+                <div class="service-icon-box" style="width:100%;height:300px;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--white);font-size:5rem;gap:.75rem;">
                     <?php echo $svc['icon']; ?>
                     <span style="font-size:1rem;opacity:.85;"><?php echo htmlspecialchars($svc['title']); ?></span>
                 </div>
             </div>
 
             <!-- Content -->
-            <div style="<?php echo $flip ? 'direction:ltr' : ''; ?>">
+            <div>
                 <div style="font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:.5rem;">Our Services</div>
                 <h2 style="color:var(--primary-dark);margin-bottom:.5rem;"><?php echo htmlspecialchars($svc['title']); ?></h2>
                 <p style="color:var(--accent);font-weight:600;margin-bottom:1rem;"><?php echo $svc['tagline']; ?></p>
                 <p style="color:var(--text-gray);margin-bottom:1.5rem;"><?php echo htmlspecialchars($svc['desc']); ?></p>
 
-                <ul style="display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:1.75rem;">
+                <ul class="feature-list" style="display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:1.75rem;">
                     <?php foreach ($svc['features'] as $feat): ?>
                     <li style="display:flex;align-items:center;gap:.5rem;font-size:.92rem;">
                         <i class="fas fa-check-circle" style="color:var(--primary);"></i>
