@@ -61,7 +61,7 @@ include 'includes/header.php';
         <div class="services-grid">
             <?php
             $services = [
-                ['icon'=>'fas fa-drill',            'title'=>'Borewell Drilling',          'desc'=>'India being an agrarian country, our farmers depend mainly on groundwater for irrigation. We drill up to 1000 ft using modern rigs.'],
+                ['icon'=>'fas fa-screwdriver-wrench', 'title'=>'Borewell Drilling',          'desc'=>'India being an agrarian country, our farmers depend mainly on groundwater for irrigation. We drill up to 1000 ft using modern rigs.'],
                 ['icon'=>'fas fa-water',             'title'=>'Tubewell Drilling',          'desc'=>'Our firm is involved in providing qualitative Tubewell Drilling service to our prestigious clients.'],
                 ['icon'=>'fas fa-cog',               'title'=>'Rotary Boring Method',       'desc'=>'This method can be successfully used for rock as well as unconsolidated formation for deeper borewells.'],
                 ['icon'=>'fas fa-soap',              'title'=>'Flushing/Cleaning',          'desc'=>'We recommend clean/flush your bore well every 5 years to retain the yield &amp; quality of water using precision systems.'],
@@ -116,7 +116,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="about-grid">
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80"
+                <img src="https://github.com/user-attachments/assets/eb70646c-925b-4625-a0a9-6b2acb8fc9ef"
                      alt="Borewell drilling site in Gurgaon, Haryana"
                      class="about-img-main"
                      loading="lazy">
@@ -253,24 +253,18 @@ include 'includes/header.php';
         <div class="clients-track">
             <?php
             $clients = [
-                ['icon'=>'fas fa-building-columns', 'name'=>'Haryana PWD'],
-                ['icon'=>'fas fa-industry',         'name'=>'IMT Manesar'],
-                ['icon'=>'fas fa-city',             'name'=>'MCG Gurgaon'],
-                ['icon'=>'fas fa-seedling',         'name'=>'Haryana Agri Dept.'],
-                ['icon'=>'fas fa-hotel',            'name'=>'DLF Housing'],
-                ['icon'=>'fas fa-building',         'name'=>'HRERA'],
-                ['icon'=>'fas fa-tractor',          'name'=>'Punjab Agro'],
-                ['icon'=>'fas fa-flask',            'name'=>'Maruti Suzuki'],
-                ['icon'=>'fas fa-hospital',         'name'=>'Civil Hospital Jhajjar'],
-                ['icon'=>'fas fa-school',           'name'=>'KV Schools'],
-                ['icon'=>'fas fa-warehouse',        'name'=>'MET City Industries'],
-                ['icon'=>'fas fa-home',             'name'=>'HSVP Colonies'],
+                ['img'=>'https://github.com/user-attachments/assets/324377e1-3737-4038-bdf9-8146a5c210a0', 'name'=>'JBM Group'],
+                ['img'=>'https://github.com/user-attachments/assets/233a1501-f6b1-4b3b-9f5f-69c7429fe507', 'name'=>'Gulf Petrochem'],
+                ['img'=>'https://github.com/user-attachments/assets/264b127a-5c0f-4c6f-9a89-fadba4afad1d', 'name'=>'Bry-Air'],
+                ['img'=>'https://github.com/user-attachments/assets/258b3279-61d9-433a-97a4-ce6b14749a9e', 'name'=>'Client'],
+                ['img'=>'https://github.com/user-attachments/assets/ec2d6abd-68fd-421b-89f3-cd5e9c2f0fe3', 'name'=>'Client'],
+                ['img'=>'https://github.com/user-attachments/assets/e2a7eec9-b232-419b-aec8-174a08e6ec80', 'name'=>'Client'],
             ];
             // Duplicate for seamless loop
             $loop = array_merge($clients, $clients);
             foreach ($loop as $c): ?>
             <div class="client-logo-card">
-                <i class="<?php echo htmlspecialchars($c['icon']); ?>"></i>
+                <img src="<?php echo htmlspecialchars($c['img']); ?>" alt="<?php echo htmlspecialchars($c['name']); ?>" loading="lazy">
                 <span><?php echo htmlspecialchars($c['name']); ?></span>
             </div>
             <?php endforeach; ?>

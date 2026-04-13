@@ -34,18 +34,18 @@ include 'includes/header.php';
         <div class="gallery-grid" id="gallery-grid">
             <?php
             $items = [
-                ['cat'=>'drilling',          'label'=>'Borewell Drilling – DLF Phase 1, Gurgaon',  'img'=>'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&auto=format&fit=crop&q=80'],
-                ['cat'=>'pump-installation', 'label'=>'Pump Installed – Cyber City, Gurgaon',       'img'=>'https://images.unsplash.com/photo-1558618047-3c8c76ca7a3d?w=600&h=450&auto=format&fit=crop&q=80'],
-                ['cat'=>'repair',            'label'=>'Borewell Repair – Faridabad, Haryana',        'img'=>'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=450&auto=format&fit=crop&q=80'],
-                ['cat'=>'cleaning',          'label'=>'Borewell Cleaning – Manesar, Haryana',        'img'=>'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&auto=format&fit=crop&q=80'],
-                ['cat'=>'casing',            'label'=>'PVC Casing – Sohna Road, Gurgaon',            'img'=>'https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=600&h=450&auto=format&fit=crop&q=80'],
-                ['cat'=>'drilling',          'label'=>'New Drilling – Palam Vihar, Gurgaon',          'img'=>'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&auto=format&fit=crop&q=80&crop=entropy'],
-                ['cat'=>'pump-installation', 'label'=>'Submersible Pump – Sector 82, Gurgaon',        'img'=>'https://images.unsplash.com/photo-1583675931520-c27b22264ccc?w=600&h=450&auto=format&fit=crop&q=80'],
-                ['cat'=>'repair',            'label'=>'CCTV Inspection – Bahadurgarh, Haryana',       'img'=>'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&h=450&auto=format&fit=crop&q=80'],
-                ['cat'=>'drilling',          'label'=>'Agricultural Borewell – Rewari, Haryana',      'img'=>'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&h=450&auto=format&fit=crop&q=80'],
-                ['cat'=>'cleaning',          'label'=>'Yield Restoration – Panipat, Haryana',         'img'=>'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&auto=format&fit=crop&q=80&crop=entropy'],
-                ['cat'=>'casing',            'label'=>'MS Casing – Karnal, Haryana',                  'img'=>'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=450&auto=format&fit=crop&q=80&crop=faces'],
-                ['cat'=>'pump-installation', 'label'=>'Kirloskar Pump – Sonipat, Haryana',            'img'=>'https://images.unsplash.com/photo-1558618047-3c8c76ca7a3d?w=600&h=450&auto=format&fit=crop&q=80&crop=entropy'],
+                ['cat'=>'drilling',          'label'=>'Borewell Drilling – DLF Phase 1, Gurgaon',  'img'=>'https://github.com/user-attachments/assets/eb70646c-925b-4625-a0a9-6b2acb8fc9ef'],
+                ['cat'=>'pump-installation', 'label'=>'Pump Installed – Cyber City, Gurgaon',       'img'=>'https://github.com/user-attachments/assets/f4bf1658-f820-43bd-8824-420cc7118f38'],
+                ['cat'=>'repair',            'label'=>'Rotary Boring – Faridabad, Haryana',          'img'=>'https://github.com/user-attachments/assets/a55b4547-aa4b-45c5-a6cb-e7d5020bca41'],
+                ['cat'=>'cleaning',          'label'=>'Borewell Cleaning – Manesar, Haryana',        'img'=>'https://github.com/user-attachments/assets/185aaba1-7f1a-4019-8697-2e3aa4ad659f'],
+                ['cat'=>'casing',            'label'=>'Rainwater Harvesting – Sohna Road, Gurgaon',  'img'=>'https://github.com/user-attachments/assets/aa2f3937-2b0e-4fc7-977e-f80f61af27da'],
+                ['cat'=>'drilling',          'label'=>'Hydrological Survey – Palam Vihar, Gurgaon',  'img'=>'https://github.com/user-attachments/assets/eab37cf0-7d2c-41fa-bc4f-0b1021a330a4'],
+                ['cat'=>'pump-installation', 'label'=>'Tubewell Drilling – Sector 82, Gurgaon',      'img'=>'https://github.com/user-attachments/assets/f4bf1658-f820-43bd-8824-420cc7118f38'],
+                ['cat'=>'repair',            'label'=>'Borewell Repair – Bahadurgarh, Haryana',       'img'=>'https://github.com/user-attachments/assets/a55b4547-aa4b-45c5-a6cb-e7d5020bca41'],
+                ['cat'=>'drilling',          'label'=>'Agricultural Borewell – Rewari, Haryana',      'img'=>'https://github.com/user-attachments/assets/eb70646c-925b-4625-a0a9-6b2acb8fc9ef'],
+                ['cat'=>'cleaning',          'label'=>'Yield Restoration – Panipat, Haryana',         'img'=>'https://github.com/user-attachments/assets/185aaba1-7f1a-4019-8697-2e3aa4ad659f'],
+                ['cat'=>'casing',            'label'=>'Modular Rainwater – Karnal, Haryana',          'img'=>'https://github.com/user-attachments/assets/aa2f3937-2b0e-4fc7-977e-f80f61af27da'],
+                ['cat'=>'pump-installation', 'label'=>'Submersible Pump – Sonipat, Haryana',          'img'=>'https://github.com/user-attachments/assets/eab37cf0-7d2c-41fa-bc4f-0b1021a330a4'],
             ];
             foreach ($items as $item): ?>
             <div class="gallery-item" data-cat="<?php echo $item['cat']; ?>">
