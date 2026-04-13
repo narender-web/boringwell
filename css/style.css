@@ -1360,6 +1360,12 @@ footer.main-footer {
     color: var(--primary);
 }
 
+.client-logo-card img {
+    max-height: 50px;
+    max-width: 120px;
+    object-fit: contain;
+}
+
 .client-logo-card span {
     font-size: .85rem;
     font-weight: 600;
