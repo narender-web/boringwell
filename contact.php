@@ -7,7 +7,7 @@ $form_message = null;
 $form_data    = [];
 
 $page_title = 'Contact Us';
-$page_desc  = 'Get in touch with Ganga Boring for a free quote on borewell drilling, repair, or pump installation in Gurgaon and Haryana.';
+$page_desc  = 'Get in touch with Ganga Boring Co. for a free quote on borewell drilling, tubewell drilling, rotary boring, cleaning, rainwater harvesting, and hydrological survey in Haryana.';
 include 'includes/header.php';
 
 // After header.php is included, read the form status it captured from session
@@ -74,8 +74,8 @@ unset($_SESSION['form_data']);
                 <div style="margin-top:2rem;border-radius:12px;overflow:hidden;border:1px solid var(--border);">
                     <div style="background:var(--light-bg);height:220px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:var(--text-gray);">
                         <span style="font-size:2.5rem;">📍</span>
-                        <p style="font-size:.9rem;">Map – Gurgaon, Haryana</p>
-                        <a href="https://maps.google.com/?q=Gurgaon,Haryana" target="_blank" rel="noopener noreferrer"
+                        <p style="font-size:.9rem;">Map – MET City, Jhajjar, Haryana</p>
+                        <a href="https://maps.google.com/?q=Sector+10A+MET+City+Jhajjar+Haryana" target="_blank" rel="noopener noreferrer"
                            style="font-size:.82rem;color:var(--primary);font-weight:600;">View on Google Maps →</a>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ unset($_SESSION['form_data']);
                             <select id="service" name="service">
                                 <option value="">-- Select Service --</option>
                                 <?php
-                                $services = ['Borewell Drilling','Borewell Repair','Borewell Cleaning','Pump Installation','Casing & Lining','Water Testing','Other / Not Sure'];
+                                $services = ['Borewell Drilling','Tubewell Drilling','Rotary Boring Method','Flushing/Cleaning','Modular Rainwater Harvesting','Hydrological Survey','Other / Not Sure'];
                                 foreach ($services as $s): ?>
                                 <option value="<?php echo htmlspecialchars($s); ?>"
                                     <?php echo (($form_data['service'] ?? '') === $s) ? 'selected' : ''; ?>>
@@ -174,7 +174,7 @@ unset($_SESSION['form_data']);
                 ['q'=>'Do you provide a free site survey?',       'a'=>'Yes! We conduct a complimentary geophysical survey (resistivity test) before drilling to identify the best water-bearing zones.'],
                 ['q'=>'What if the borewell is dry?',             'a'=>'If water is not found at the agreed depth, we do not charge for drilling beyond the agreed free-drilling limit. Terms are clearly stated in our contract.'],
                 ['q'=>'Do you give any warranty?',                'a'=>'We provide a 1-year workmanship warranty on all drilling and installation work. Pump warranties are as per manufacturer terms.'],
-                ['q'=>'Which areas do you service?',              'a'=>'We cover all of Gurgaon and major towns across Haryana including Faridabad, Manesar, Rohtak, Panipat, Karnal, and more.'],
+                ['q'=>'Which areas do you service?',              'a'=>'We cover all of Haryana including Jhajjar, MET City, Gurgaon, Faridabad, Manesar, Rohtak, Panipat, Karnal, and more.'],
             ];
             foreach ($faqs as $i => $faq): ?>
             <details style="background:var(--white);border-radius:8px;margin-bottom:1rem;border:1px solid var(--border);overflow:hidden;">

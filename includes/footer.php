@@ -39,11 +39,11 @@
                 <h4>Our Services</h4>
                 <ul>
                     <li><a href="services.php#drilling"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Borewell Drilling</a></li>
-                    <li><a href="services.php#repair"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Borewell Repair</a></li>
-                    <li><a href="services.php#cleaning"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Borewell Cleaning</a></li>
-                    <li><a href="services.php#pump"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Pump Installation</a></li>
-                    <li><a href="services.php#casing"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Casing &amp; Lining</a></li>
-                    <li><a href="services.php#water-testing"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Water Testing</a></li>
+                    <li><a href="services.php#tubewell"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Tubewell Drilling</a></li>
+                    <li><a href="services.php#rotary"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Rotary Boring Method</a></li>
+                    <li><a href="services.php#cleaning"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Flushing/Cleaning</a></li>
+                    <li><a href="services.php#rainwater"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Modular Rainwater Harvesting</a></li>
+                    <li><a href="services.php#survey"><i class="fas fa-chevron-right" style="font-size:.7rem;margin-right:.4rem;color:var(--accent)"></i>Hydrological Survey</a></li>
                 </ul>
             </div>
 
@@ -123,11 +123,11 @@
                     <select id="modal-service" name="service">
                         <option value="">-- Select Service --</option>
                         <option value="Borewell Drilling">Borewell Drilling</option>
-                        <option value="Borewell Repair">Borewell Repair</option>
-                        <option value="Borewell Cleaning">Borewell Cleaning</option>
-                        <option value="Pump Installation">Pump Installation</option>
-                        <option value="Casing &amp; Lining">Casing &amp; Lining</option>
-                        <option value="Water Testing">Water Testing</option>
+                        <option value="Tubewell Drilling">Tubewell Drilling</option>
+                        <option value="Rotary Boring Method">Rotary Boring Method</option>
+                        <option value="Flushing/Cleaning">Flushing/Cleaning</option>
+                        <option value="Modular Rainwater Harvesting">Modular Rainwater Harvesting</option>
+                        <option value="Hydrological Survey">Hydrological Survey</option>
                         <option value="Other / Not Sure">Other / Not Sure</option>
                     </select>
                 </div>
