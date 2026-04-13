@@ -43,7 +43,7 @@ $services = [
     ],
     [
         'id'      => 'rotary',
-        'img'     => 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=700&h=300&auto=format&fit=crop&q=80',
+        'img'     => 'https://github.com/user-attachments/assets/a55b4547-aa4b-45c5-a6cb-e7d5020bca41',
         'alt'     => 'Rotary boring method at work',
         'title'   => 'Rotary Boring Method',
         'tagline' => 'Versatile drilling method for rock and unconsolidated formations',
@@ -52,7 +52,7 @@ $services = [
     ],
     [
         'id'      => 'cleaning',
-        'img'     => 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&h=300&auto=format&fit=crop&q=80',
+        'img'     => 'https://github.com/user-attachments/assets/185aaba1-7f1a-4019-8697-2e3aa4ad659f',
         'alt'     => 'High-pressure borewell flushing and cleaning',
         'title'   => 'Flushing/Cleaning',
         'tagline' => 'Professional flushing and cleaning to maintain yield & water quality',
