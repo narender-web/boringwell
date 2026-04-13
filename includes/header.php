@@ -1,10 +1,10 @@
 <?php
 // Shared configuration
-define('SITE_NAME',    'Ganga Boring');
-define('SITE_PHONE',   '+91 98765 43210');
-define('SITE_PHONE2',  '+91 98765 43211');
-define('SITE_EMAIL',   'jitu@gangaborwellharyana.com');
-define('SITE_ADDRESS', 'No. 12, Main Road, Gurgaon - 122001, Haryana, India');
+define('SITE_NAME',    'Ganga Boring Co.');
+define('SITE_PHONE',   '+91 99990 72971');
+define('SITE_PHONE2',  '+91 99990 72971');
+define('SITE_EMAIL',   'info@gangaboringharyana.com');
+define('SITE_ADDRESS', 'Plot No 1, Ground Floor, Sector 10A, MET City, Jhajjar 124105, Haryana');
 define('SITE_HOURS',   'Mon – Sat: 8:00 AM – 7:00 PM');
 
 // Session + CSRF management (shared across all pages)

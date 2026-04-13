@@ -38,11 +38,11 @@ include 'includes/header.php';
                 <p>From drilling to pump fitting — we handle it all under one roof.</p>
                 <div class="hero-card-features">
                     <span><i class="fas fa-check"></i> Drilling</span>
-                    <span><i class="fas fa-check"></i> Repair</span>
+                    <span><i class="fas fa-check"></i> Tubewell</span>
+                    <span><i class="fas fa-check"></i> Rotary</span>
                     <span><i class="fas fa-check"></i> Cleaning</span>
-                    <span><i class="fas fa-check"></i> Pumps</span>
-                    <span><i class="fas fa-check"></i> Casing</span>
-                    <span><i class="fas fa-check"></i> Testing</span>
+                    <span><i class="fas fa-check"></i> Rainwater</span>
+                    <span><i class="fas fa-check"></i> Survey</span>
                 </div>
             </div>
         </div>
@@ -61,12 +61,12 @@ include 'includes/header.php';
         <div class="services-grid">
             <?php
             $services = [
-                ['icon'=>'fas fa-drill',            'title'=>'Borewell Drilling',     'desc'=>'State-of-the-art rotary drilling rigs for new borewells with precise depth and diameter.'],
-                ['icon'=>'fas fa-tools',             'title'=>'Borewell Repair',       'desc'=>'Expert diagnosis and repair of damaged or low-yield borewells, restoring them to peak performance.'],
-                ['icon'=>'fas fa-soap',              'title'=>'Borewell Cleaning',     'desc'=>'High-pressure flushing and chemical treatment to remove sediment and increase water flow.'],
-                ['icon'=>'fas fa-pump-medical',      'title'=>'Pump Installation',     'desc'=>'Supply and installation of submersible and jet pumps from trusted brands with warranty.'],
-                ['icon'=>'fas fa-layer-group',       'title'=>'Casing & Lining',       'desc'=>'PVC and steel casing to protect borewell walls from collapse and contamination.'],
-                ['icon'=>'fas fa-flask',             'title'=>'Water Testing',         'desc'=>'Laboratory-standard water quality analysis for potability, hardness, and contamination checks.'],
+                ['icon'=>'fas fa-drill',            'title'=>'Borewell Drilling',          'desc'=>'India being an agrarian country, our farmers depend mainly on groundwater for irrigation. We drill up to 1000 ft using modern rigs.'],
+                ['icon'=>'fas fa-water',             'title'=>'Tubewell Drilling',          'desc'=>'Our firm is involved in providing qualitative Tubewell Drilling service to our prestigious clients.'],
+                ['icon'=>'fas fa-cog',               'title'=>'Rotary Boring Method',       'desc'=>'This method can be successfully used for rock as well as unconsolidated formation for deeper borewells.'],
+                ['icon'=>'fas fa-soap',              'title'=>'Flushing/Cleaning',          'desc'=>'We recommend clean/flush your bore well every 5 years to retain the yield &amp; quality of water using precision systems.'],
+                ['icon'=>'fas fa-cloud-rain',        'title'=>'Modular Rainwater Harvesting','desc'=>'Advanced underground water storage using prefabricated, interlocking modules with 95% void space for efficient storage and recharge.'],
+                ['icon'=>'fas fa-flask',             'title'=>'Hydrological Survey',        'desc'=>'Scientific, field-based assessment using geophysical techniques, water table mapping, and chemical analysis for groundwater management.'],
             ];
             foreach ($services as $s): ?>
             <div class="service-card">
@@ -235,6 +235,44 @@ include 'includes/header.php';
             $areas = ['New Delhi','Noida','Greater Noida','Gurgaon (Gurugram)','Faridabad','Ghaziabad','Indirapuram','Vasundhara','Dwarka','Rohini','Sonipat','Panipat','Bahadurgarh','Manesar','Ballabhgarh','Palwal','Meerut','Rewari'];
             foreach ($areas as $a): ?>
             <div class="area-item"><i class="fas fa-map-marker-alt"></i><?php echo htmlspecialchars($a); ?></div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CLIENTS ===== -->
+<section class="clients-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Trusted Clients</h2>
+            <span class="underline"></span>
+            <p>Proud to serve government bodies, industries, housing societies, and agricultural organisations across Haryana &amp; NCR.</p>
+        </div>
+    </div>
+    <div class="clients-marquee-wrapper" aria-label="Our clients">
+        <div class="clients-track">
+            <?php
+            $clients = [
+                ['icon'=>'fas fa-building-columns', 'name'=>'Haryana PWD'],
+                ['icon'=>'fas fa-industry',         'name'=>'IMT Manesar'],
+                ['icon'=>'fas fa-city',             'name'=>'MCG Gurgaon'],
+                ['icon'=>'fas fa-seedling',         'name'=>'Haryana Agri Dept.'],
+                ['icon'=>'fas fa-hotel',            'name'=>'DLF Housing'],
+                ['icon'=>'fas fa-building',         'name'=>'HRERA'],
+                ['icon'=>'fas fa-tractor',          'name'=>'Punjab Agro'],
+                ['icon'=>'fas fa-flask',            'name'=>'Maruti Suzuki'],
+                ['icon'=>'fas fa-hospital',         'name'=>'Civil Hospital Jhajjar'],
+                ['icon'=>'fas fa-school',           'name'=>'KV Schools'],
+                ['icon'=>'fas fa-warehouse',        'name'=>'MET City Industries'],
+                ['icon'=>'fas fa-home',             'name'=>'HSVP Colonies'],
+            ];
+            // Duplicate for seamless loop
+            $loop = array_merge($clients, $clients);
+            foreach ($loop as $c): ?>
+            <div class="client-logo-card">
+                <i class="<?php echo htmlspecialchars($c['icon']); ?>"></i>
+                <span><?php echo htmlspecialchars($c['name']); ?></span>
+            </div>
             <?php endforeach; ?>
         </div>
     </div>
