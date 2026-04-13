@@ -43,7 +43,7 @@ $services = [
     ],
     [
         'id'      => 'rotary',
-        'img'     => 'https://github.com/user-attachments/assets/a55b4547-aa4b-45c5-a6cb-e7d5020bca41',
+        'img'     => 'https://github.com/user-attachments/assets/a122ed5c-6396-4d5b-be30-9b6872809f22',
         'alt'     => 'Rotary boring method at work',
         'title'   => 'Rotary Boring Method',
         'tagline' => 'Versatile drilling method for rock and unconsolidated formations',
