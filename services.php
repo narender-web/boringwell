@@ -25,7 +25,7 @@ include 'includes/header.php';
 $services = [
     [
         'id'      => 'drilling',
-        'img'     => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&h=300&auto=format&fit=crop&q=80',
+        'img'     => 'https://github.com/user-attachments/assets/eb70646c-925b-4625-a0a9-6b2acb8fc9ef',
         'alt'     => 'Borewell drilling rig at a site in Haryana',
         'title'   => 'Borewell Drilling',
         'tagline' => 'Expert borewell construction for residential, commercial &amp; agricultural use',
@@ -34,7 +34,7 @@ $services = [
     ],
     [
         'id'      => 'tubewell',
-        'img'     => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&h=300&auto=format&fit=crop&q=80',
+        'img'     => 'https://github.com/user-attachments/assets/f4bf1658-f820-43bd-8824-420cc7118f38',
         'alt'     => 'Tubewell drilling in progress',
         'title'   => 'Tubewell Drilling',
         'tagline' => 'Qualitative tubewell drilling service for all clients',
@@ -61,7 +61,7 @@ $services = [
     ],
     [
         'id'      => 'rainwater',
-        'img'     => 'https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=700&h=300&auto=format&fit=crop&q=80',
+        'img'     => 'https://github.com/user-attachments/assets/aa2f3937-2b0e-4fc7-977e-f80f61af27da',
         'alt'     => 'Modular rainwater harvesting system installation',
         'title'   => 'Modular Rainwater Harvesting',
         'tagline' => 'Advanced underground water storage and groundwater recharge systems',
@@ -70,7 +70,7 @@ $services = [
     ],
     [
         'id'      => 'survey',
-        'img'     => 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=700&h=300&auto=format&fit=crop&q=80',
+        'img'     => 'https://github.com/user-attachments/assets/eab37cf0-7d2c-41fa-bc4f-0b1021a330a4',
         'alt'     => 'Hydrological survey and water resource assessment',
         'title'   => 'Hydrological Survey',
         'tagline' => 'Scientific assessment of groundwater potential, quality, and flow dynamics',

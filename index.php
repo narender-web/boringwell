@@ -240,6 +240,44 @@ include 'includes/header.php';
     </div>
 </section>
 
+<!-- ===== CLIENTS ===== -->
+<section class="clients-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Trusted Clients</h2>
+            <span class="underline"></span>
+            <p>Proud to serve government bodies, industries, housing societies, and agricultural organisations across Haryana &amp; NCR.</p>
+        </div>
+    </div>
+    <div class="clients-marquee-wrapper" aria-label="Our clients">
+        <div class="clients-track">
+            <?php
+            $clients = [
+                ['icon'=>'fas fa-building-columns', 'name'=>'Haryana PWD'],
+                ['icon'=>'fas fa-industry',         'name'=>'IMT Manesar'],
+                ['icon'=>'fas fa-city',             'name'=>'MCG Gurgaon'],
+                ['icon'=>'fas fa-seedling',         'name'=>'Haryana Agri Dept.'],
+                ['icon'=>'fas fa-hotel',            'name'=>'DLF Housing'],
+                ['icon'=>'fas fa-building',         'name'=>'HRERA'],
+                ['icon'=>'fas fa-tractor',          'name'=>'Punjab Agro'],
+                ['icon'=>'fas fa-flask',            'name'=>'Maruti Suzuki'],
+                ['icon'=>'fas fa-hospital',         'name'=>'Civil Hospital Jhajjar'],
+                ['icon'=>'fas fa-school',           'name'=>'KV Schools'],
+                ['icon'=>'fas fa-warehouse',        'name'=>'MET City Industries'],
+                ['icon'=>'fas fa-home',             'name'=>'HSVP Colonies'],
+            ];
+            // Duplicate for seamless loop
+            $loop = array_merge($clients, $clients);
+            foreach ($loop as $c): ?>
+            <div class="client-logo-card">
+                <i class="<?php echo htmlspecialchars($c['icon']); ?>"></i>
+                <span><?php echo htmlspecialchars($c['name']); ?></span>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
 <!-- ===== CTA STRIP ===== -->
 <section class="cta-section" style="background:var(--accent);padding:3rem 0;">
     <div class="container text-center">
