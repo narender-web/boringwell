@@ -40,12 +40,6 @@ include 'includes/header.php';
                 ['cat'=>'cleaning',          'label'=>'Borewell Cleaning – Manesar, Haryana',        'img'=>'https://github.com/user-attachments/assets/185aaba1-7f1a-4019-8697-2e3aa4ad659f'],
                 ['cat'=>'casing',            'label'=>'Rainwater Harvesting – Sohna Road, Gurgaon',  'img'=>'https://github.com/user-attachments/assets/aa2f3937-2b0e-4fc7-977e-f80f61af27da'],
                 ['cat'=>'drilling',          'label'=>'Hydrological Survey – Palam Vihar, Gurgaon',  'img'=>'https://github.com/user-attachments/assets/eab37cf0-7d2c-41fa-bc4f-0b1021a330a4'],
-                ['cat'=>'pump-installation', 'label'=>'Tubewell Drilling – Sector 82, Gurgaon',      'img'=>'https://github.com/user-attachments/assets/f4bf1658-f820-43bd-8824-420cc7118f38'],
-                ['cat'=>'repair',            'label'=>'Borewell Repair – Bahadurgarh, Haryana',       'img'=>'https://github.com/user-attachments/assets/a55b4547-aa4b-45c5-a6cb-e7d5020bca41'],
-                ['cat'=>'drilling',          'label'=>'Agricultural Borewell – Rewari, Haryana',      'img'=>'https://github.com/user-attachments/assets/eb70646c-925b-4625-a0a9-6b2acb8fc9ef'],
-                ['cat'=>'cleaning',          'label'=>'Yield Restoration – Panipat, Haryana',         'img'=>'https://github.com/user-attachments/assets/185aaba1-7f1a-4019-8697-2e3aa4ad659f'],
-                ['cat'=>'casing',            'label'=>'Modular Rainwater – Karnal, Haryana',          'img'=>'https://github.com/user-attachments/assets/aa2f3937-2b0e-4fc7-977e-f80f61af27da'],
-                ['cat'=>'pump-installation', 'label'=>'Submersible Pump – Sonipat, Haryana',          'img'=>'https://github.com/user-attachments/assets/eab37cf0-7d2c-41fa-bc4f-0b1021a330a4'],
             ];
             foreach ($items as $item): ?>
             <div class="gallery-item" data-cat="<?php echo $item['cat']; ?>">
@@ -61,11 +55,19 @@ include 'includes/header.php';
     </div>
 </section>
 
+<!-- Lightbox -->
+<div id="gallery-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;align-items:center;justify-content:center;flex-direction:column;padding:1.5rem;">
+    <button id="lightbox-close" aria-label="Close" style="position:fixed;top:1.25rem;right:1.5rem;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;">&times;</button>
+    <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:80vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.6);">
+    <p id="lightbox-caption" style="color:rgba(255,255,255,.85);margin-top:1rem;font-size:.95rem;text-align:center;max-width:600px;"></p>
+</div>
+
 <style>
 .gallery-filter-btn:hover {
     background: var(--primary) !important;
     color: var(--white) !important;
 }
+#gallery-lightbox.active { display: flex !important; }
 </style>
 
 <script>
@@ -91,6 +93,46 @@ document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
         });
     });
 });
+
+// Lightbox
+(function () {
+    const lightbox    = document.getElementById('gallery-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCap = document.getElementById('lightbox-caption');
+    const closeBtn    = document.getElementById('lightbox-close');
+
+    function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt;
+        lightboxCap.textContent = alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('#gallery-grid .gallery-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+            const img = item.querySelector('img.gallery-photo');
+            const cap = item.querySelector('.gallery-caption');
+            if (img) openLightbox(img.src, cap ? cap.textContent : img.alt);
+        });
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+    });
+})();
 </script>
 
 <!-- CTA -->
