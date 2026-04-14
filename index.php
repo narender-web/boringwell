@@ -256,6 +256,10 @@ include 'includes/header.php';
                 ['img'=>'https://github.com/user-attachments/assets/324377e1-3737-4038-bdf9-8146a5c210a0', 'name'=>'JBM Group'],
                 ['img'=>'https://github.com/user-attachments/assets/233a1501-f6b1-4b3b-9f5f-69c7429fe507', 'name'=>'Gulf Petrochem'],
                 ['img'=>'https://github.com/user-attachments/assets/264b127a-5c0f-4c6f-9a89-fadba4afad1d', 'name'=>'Bry-Air'],
+                ['img'=>'https://github.com/user-attachments/assets/c7c0a0a3-8461-4a86-aef6-e9ddcab33dca', 'name'=>'Hindalco'],
+                ['img'=>'https://github.com/user-attachments/assets/9c576062-b85c-48a1-9e3d-e23eb60a6b2e', 'name'=>'The Heritage School'],
+                ['img'=>'https://github.com/user-attachments/assets/48e3dd34-3fb2-4a79-ad0b-1da571f61ee8', 'name'=>'Hitachi'],
+                ['img'=>'https://github.com/user-attachments/assets/6066d595-3453-42c3-b4a2-67138403362c', 'name'=>'Signature Global'],
             ];
             // Duplicate for seamless loop
             $loop = array_merge($clients, $clients);
