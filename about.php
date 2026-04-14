@@ -15,8 +15,8 @@ include 'includes/header.php';
     <div class="container">
         <div class="about-grid">
             <div class="about-image-wrapper">
-                <img src="https://github.com/user-attachments/assets/a55b4547-aa4b-45c5-a6cb-e7d5020bca41"
-                     alt="Rotary boring by Ganga Boring team in Haryana"
+                <img src="https://github.com/user-attachments/assets/eb70646c-925b-4625-a0a9-6b2acb8fc9ef"
+                     alt="Borewell drilling by Ganga Boring team in Haryana"
                      class="about-img-main"
                      loading="lazy">
                 <div class="experience-badge">
