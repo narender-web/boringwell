@@ -15,8 +15,8 @@ include 'includes/header.php';
     <div class="container">
         <div class="about-grid">
             <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&auto=format&fit=crop&q=80"
-                     alt="Ganga Boring team at work in Haryana"
+                <img src="https://github.com/user-attachments/assets/a55b4547-aa4b-45c5-a6cb-e7d5020bca41"
+                     alt="Rotary boring by Ganga Boring team in Haryana"
                      class="about-img-main"
                      loading="lazy">
                 <div class="experience-badge">
@@ -31,7 +31,7 @@ include 'includes/header.php';
                     <span class="underline" style="margin:.75rem 0 0;"></span>
                 </div>
 
-                <p>Founded in 2004 by <strong>Mr. Ganga</strong>, Ganga Boring began as a small one-rig operation in Gurgaon and has grown into one of Haryana's most trusted borewell service providers.</p>
+                <p>Founded in 2004 by <strong>Mr. Jitender Sangwan</strong>, Ganga Boring began as a small one-rig operation in Gurgaon and has grown into one of Haryana's most trusted borewell service providers.</p>
 
                 <p>We specialize in new borewell drilling, borewell repair, borewell cleaning, submersible pump installation, PVC casing, and water quality testing. Our licensed team of hydrogeologists and experienced drill operators serves residential, commercial, industrial, and agricultural clients.</p>
 
@@ -98,7 +98,7 @@ include 'includes/header.php';
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.75rem;">
             <?php
             $team = [
-                ['name'=>'Ganga',           'role'=>'Founder & CEO',            'icon'=>'👨‍💼'],
+                ['name'=>'Jitender Sangwan', 'role'=>'Founder & CEO',            'icon'=>'👨‍💼'],
                 ['name'=>'Vijay Kumar',    'role'=>'Lead Hydrogeologist',       'icon'=>'🔬'],
                 ['name'=>'Raju Naik',      'role'=>'Senior Drill Operator',     'icon'=>'⚙️'],
                 ['name'=>'Priya Sharma',   'role'=>'Customer Relations Manager','icon'=>'👩‍💼'],

@@ -256,9 +256,6 @@ include 'includes/header.php';
                 ['img'=>'https://github.com/user-attachments/assets/324377e1-3737-4038-bdf9-8146a5c210a0', 'name'=>'JBM Group'],
                 ['img'=>'https://github.com/user-attachments/assets/233a1501-f6b1-4b3b-9f5f-69c7429fe507', 'name'=>'Gulf Petrochem'],
                 ['img'=>'https://github.com/user-attachments/assets/264b127a-5c0f-4c6f-9a89-fadba4afad1d', 'name'=>'Bry-Air'],
-                ['img'=>'https://github.com/user-attachments/assets/258b3279-61d9-433a-97a4-ce6b14749a9e', 'name'=>'Client'],
-                ['img'=>'https://github.com/user-attachments/assets/ec2d6abd-68fd-421b-89f3-cd5e9c2f0fe3', 'name'=>'Client'],
-                ['img'=>'https://github.com/user-attachments/assets/e2a7eec9-b232-419b-aec8-174a08e6ec80', 'name'=>'Client'],
             ];
             // Duplicate for seamless loop
             $loop = array_merge($clients, $clients);
